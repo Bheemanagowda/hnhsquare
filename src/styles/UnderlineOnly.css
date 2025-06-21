@@ -1,0 +1,29 @@
+.underline-only {
+  width: 100px; /* Set line width */
+  height: 3px; /* Set line thickness */
+  /* Change to match your theme */
+  margin: 0 auto; /* Center horizontally */
+  background-color: #a50100;
+  border-radius: 2px;
+  margin-top: -10px; /* Optional: bring it closer to above heading */
+}
+
+.who-we-are {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: block;
+}
+.border-color {
+  background-color: #fff;
+}
+.footer-underline {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  display: block;
+  background-color: #ffff;
+  width: 70px;
+  height: 3px;
+}
+.mb-2 {
+  margin-bottom: 20px !important;
+}

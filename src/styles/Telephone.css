@@ -1,0 +1,8 @@
+.phone-numbers {
+  display: flex;
+  gap: 5px;
+}
+.phone-numbers a {
+  color: #fff;
+  text-decoration: none;
+}

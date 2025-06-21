@@ -1,0 +1,54 @@
+.wp {
+  cursor: pointer;
+  position: fixed;
+  top: 70%;
+  right: 2%;
+  z-index: 9999;
+  width: 55px;
+  height: 55px;
+}
+
+/* Hide on small screens */
+@media only screen and (max-width: 768px) {
+  .wp {
+    display: none;
+  }
+}
+
+/* Mobile bottom icons */
+.mobile-icons {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-icons {
+    background: #4bb17b !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    font-size: 15px;
+    border-top: 2px solid gray;
+    height: 70px;
+    padding-top: 5px;
+  }
+
+  .mobile-icons a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .mobile-icons img {
+    width: 30px;
+  }
+
+  .mobile-icons p {
+    margin: 4px 0 0;
+    font-size: 12px;
+  }
+}

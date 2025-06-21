@@ -1,0 +1,46 @@
+/* src/styles/ClientLogos.css */
+
+.client-logos-section {
+  background-color: #f8f9fa; /* Light background for the section */
+  padding: 60px 0;
+  overflow: hidden; /* Important for Swiper to manage overflows */
+}
+
+.client-logos-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.client-slider-container {
+  /* Any styles for the overall slider container if needed */
+  padding: 0px 0; /* Add some vertical padding around the slider itself */
+}
+
+.client-logo-image {
+  width: 100%; /* Adjust max width of individual logos */
+  height: 100%; /* Adjust max height of individual logos */
+  object-fit: contain; /* Ensures the entire image is visible within its bounds */
+
+  display: block; /* Ensures proper display within SwiperSlide */
+  margin: 0 auto; /* Center the image if its container is wider */
+  border-radius: 8px;
+
+  border: 1px solid #aeaeae;
+}
+
+.client-logo-image:hover {
+  filter: grayscale(0%); /* Optional: color on hover */
+  opacity: 1; /* Optional: full opacity on hover */
+}
+
+/* You might want to override some default Swiper styles here if needed */
+/* Example: To remove any default Swiper pagination/navigation styles if you've enabled them */
+.client-slider-container .swiper-pagination-bullets {
+  display: none !important;
+}
+.client-slider-container .swiper-button-prev,
+.client-slider-container .swiper-button-next {
+  display: none !important;
+}

@@ -1,0 +1,88 @@
+.faq-container {
+  display: flex;
+  padding: 40px;
+  color: #333;
+  min-height: 100vh;
+}
+
+.faq-left {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faq-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ask-question {
+  color: #4ca2a1;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.faq-card {
+  background-color: #aeaeae2e; /* Black with 60% transparency */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.faq-card:hover {
+  background-color: #b71b0c;
+  color: #fff;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Icon base style */
+.faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* Icon style on hover of the card */
+.faq-card:hover .faq-icon {
+  background-color: #fff;
+  color: #b61002;
+}
+
+/* Answer styling */
+.faq-answer {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* FAQ content layout */
+.faq-content {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}

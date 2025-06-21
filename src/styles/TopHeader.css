@@ -1,0 +1,50 @@
+.top-header {
+  background-color: #b21001;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.top-header .left span {
+  font-weight: bold;
+}
+
+.top-header .right a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.top-header .right a:hover {
+  color: #000;
+}
+.social-media {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 720px) {
+  .top-header {
+    display: none;
+  }
+}
+.left {
+  display: flex;
+  gap: 20px;
+}
+.phone-numbers {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.email-details {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}

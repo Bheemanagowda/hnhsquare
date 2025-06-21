@@ -1,0 +1,22 @@
+/* src/styles/Video.css */
+.video-wrapper {
+  max-width: 1400px; /* Adjust this value for smaller size */
+  margin: 0 auto;
+  height: 700px;
+}
+
+.responsive-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.video-section {
+  background-color: #262626;
+}
+.design-para {
+  font-size: 22px;
+
+  line-height: 30px;
+  font-family: "Montserrat", sans-serif;
+}
