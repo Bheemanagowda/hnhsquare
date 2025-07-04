@@ -1,38 +1,39 @@
-// src/components/CompanyStats.jsx
-import React from "react";
 import CountUp from "react-countup";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import ConstructionIcon from "@mui/icons-material/Construction";
-import PublicIcon from "@mui/icons-material/Public";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+
 import "../styles/CompanyStats.css";
-import bg from "../assets/images/bg/1.jpg";
 import "../styles/space.css";
+
+import experience from "../assets/images/icons/our-achievements/1.png";
+import members from "../assets/images/icons/our-achievements/2.png";
+import completed from "../assets/images/icons/our-achievements/3.png";
+import customers from "../assets/images/icons/our-achievements/4.png";
+
+import bg from "../assets/images/bg/1.jpg";
 import UnderlineOnly from "./UnderlineOnly";
 
 const statsData = [
   {
-    title: "HUNDREDS OF PROJECTS",
-    icon: <EngineeringIcon className="icon" />,
-    value: 99,
+    title: "YEARS EXPERIENCE",
+    image: experience,
+    value: 14,
     suffix: "+",
   },
   {
-    title: "OVER TEN YEARS",
-    icon: <ConstructionIcon className="icon" />,
-    value: 25,
+    title: "TEAM MEMBERS",
+    image: members,
+    value: 200,
     suffix: "+",
   },
   {
-    title: "CLIENTS SERVED GLOBALLY",
-    icon: <PublicIcon className="icon" />,
-    value: 35,
+    title: "PROJECTS COMPLETED",
+    image: completed,
+    value: 250,
     suffix: "+",
   },
   {
-    title: "TRUSTED BY MANY CLIENTS",
-    icon: <ThumbUpIcon className="icon" />,
-    value: 60,
+    title: "HAPPY CUSTOMERS",
+    image: customers,
+    value: 250,
     suffix: "+",
   },
 ];
@@ -40,7 +41,7 @@ const statsData = [
 const CompanyStats = () => {
   return (
     <section
-      className="stats-section p-5"
+      className="stats-section p-space"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -50,19 +51,36 @@ const CompanyStats = () => {
         padding: "80px 20px",
       }}
     >
-      <h2 className="stats-title mb-2">Our Achievements</h2> {/* Title added */}
-      <UnderlineOnly className="mb-30 .who-we-are border-color" />
-      <div className="stats-container">
-        {statsData.map((stat, index) => (
-          <div key={index} className="stats-card">
-            {stat.icon}
-            <h3 className="stats-number">
-              <CountUp end={stat.value} duration={2} />
-              {stat.suffix}
-            </h3>
-            <p className="stats-label">{stat.title}</p>
-          </div>
-        ))}
+      <div className="container text-center text-white">
+        <h2 className="title mb-2 text-white mb-4">
+          Our <span className="color-red">Achievements</span>
+        </h2>
+        <UnderlineOnly className="mb-30 border-color" />
+
+        <div className="row justify-content-center">
+          {statsData.map((stat, index) => (
+            <div
+              key={index}
+              className="col-12 col-md-6 col-lg-3 col-md-3 mb-4"
+              data-aos="fade-up"
+              data-aos-delay={index * 600} // Increased delay per card
+            >
+              <div className="stats-card p-3 rounded shadow">
+                <img
+                  src={stat.image}
+                  alt={stat.title}
+                  className="img-fluid mb-3"
+                  style={{ maxHeight: "60px" }}
+                />
+                <h3 className="stats-number">
+                  <CountUp end={stat.value} duration={7} />
+                  {stat.suffix}
+                </h3>
+                <p className="stats-label">{stat.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

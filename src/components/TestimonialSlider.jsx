@@ -1,14 +1,15 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaStar, FaQuoteRight } from "react-icons/fa";
+import { Pagination, Autoplay } from "swiper/modules";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/TestimonialSlider.css";
+import "../styles/space.css";
 import avatara from "../assets/images/testimonials/test.png";
 import UnderlineOnly from "./UnderlineOnly";
-
-import { Pagination, Autoplay } from "swiper/modules";
-import "../styles/space.css";
 
 const testimonials = [
   {
@@ -33,57 +34,56 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <div className="p-5">
+    <div className="p-space">
       <div className="container">
-        <div className="testimonial-wrapper ">
-          <h2 className="testimonial-heading text-center title mb-2">
-            Client Reviews
+        <div className="testimonial-wrapper">
+          <h2 className="testimonial-heading text-center title mb-4">
+            Client <span className="color-text ">Reviews</span>
           </h2>
-          <UnderlineOnly className="mb-30" />
-          <div className="row">
-            <Swiper
-              spaceBetween={30}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 4000 }}
-              loop={true}
-              modules={[Pagination, Autoplay]}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-              }}
-              className="testimonial-swiper"
-            >
-              {testimonials.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="col-md-6">
-                    <div className="testimonial-width">
-                      <div className="testimonial-card">
-                        <div className="testimonial-header">
-                          <img
-                            src={item.image}
-                            alt={item.name}
-                            className="avatar"
-                          />
-                          <h4 className="name">{item.name}</h4>
-                        </div>
-                        <p className="message">{item.text}</p>
-                        <div className="stars">
-                          {[...Array(item.rating)].map((_, i) => (
-                            <FaStar key={i} className="star" />
-                          ))}
-                        </div>
-                        <FaQuoteRight className="quote-icon" />
-                      </div>
-                    </div>
+          <UnderlineOnly className="mb-4" />
+
+          <Swiper
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 4000 }}
+            loop={true}
+            modules={[Pagination, Autoplay]}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1,
+              },
+              1025: {
+                slidesPerView: 2,
+              },
+            }}
+            className="testimonial-swiper"
+          >
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="testimonial-card">
+                  <div className="testimonial-header">
+                    <LazyLoadImage
+                      src={item.image}
+                      alt={item.name}
+                      effect="blur"
+                      className="avatar"
+                    />
+                    <h4 className="name">{item.name}</h4>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                  <p className="message">{item.text}</p>
+                  <div className="stars">
+                    {[...Array(item.rating)].map((_, i) => (
+                      <FaStar key={i} className="star" />
+                    ))}
+                  </div>
+                  <FaQuoteRight className="quote-icon" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

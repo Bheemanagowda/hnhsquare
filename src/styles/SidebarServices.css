@@ -1,0 +1,30 @@
+.hover-bg:hover {
+  background-color: #b21001;
+}
+.hover-bg:hover li {
+  color: #fff;
+}
+
+.active-service {
+  background-color: #b21001; /* Highlighted orange */
+  font-weight: bold;
+}
+.product-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+}
+.product-name:hover {
+  color: #fff;
+}
+
+.hover-bg:hover .icon-hover {
+  color: #fff !important;
+}
+.hover-bg:hover .text-muted {
+  color: #fff !important;
+}
+.active-service .fw-semibold,
+.active-service small {
+  color: #fff !important;
+}

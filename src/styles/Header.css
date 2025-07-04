@@ -27,3 +27,66 @@
   background-color: #fff; /* Or your desired background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  display: none;
+}
+.nav-link,
+.navbar-nav .nav-link {
+  color: #000; /* Default text color */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: #b21001; /* Hover color */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: #b21001 !important; /* Active color */
+}
+
+/* Optional: Dropdown items hover */
+.dropdown-menu .dropdown-item:hover {
+  color: #b21001;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #b21001 !important;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #b21001 !important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  display: none;
+}

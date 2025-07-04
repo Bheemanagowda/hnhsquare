@@ -1,0 +1,18 @@
+.career-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.career-contact {
+  font-size: 1rem;
+}
+
+.career-email {
+  color: #c03123;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.career-email:hover {
+  text-decoration: underline;
+}

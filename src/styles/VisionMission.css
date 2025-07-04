@@ -1,0 +1,20 @@
+.vision-mission-section h4 {
+  font-weight: 600;
+}
+
+.vision-mission-section ul {
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.vision-mission-section li {
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.vision-mission-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 🧷 This keeps the image fixed */
+}

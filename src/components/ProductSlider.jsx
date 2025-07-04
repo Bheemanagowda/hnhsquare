@@ -1,81 +1,146 @@
 // src/components/ProductSlider.jsx
 import React from "react";
 import Slider from "./Slider";
-import product1 from "../assets/images/about/1.jpg";
+import product1 from "../assets/images/our-products/bathroom-partition.jpg";
+import product2 from "../assets/images/our-products/led-mirror.jpg";
+import product3 from "../assets/images/our-products/office-partition.jpg";
+import product4 from "../assets/images/our-products/open-shutters.jpg";
+import product5 from "../assets/images/our-products/pooja-door.jpg";
+import product6 from "../assets/images/our-products/profile-door.jpg";
+import product7 from "../assets/images/our-products/profile-showcase.jpg";
+import product8 from "../assets/images/our-products/sliding-door-for-room-entrance.jpg";
+import product9 from "../assets/images/our-products/walkin-closet.jpg";
+import product10 from "../assets/images/our-products/wardrobe-sliding-door.jpg";
 import "../styles/ProductSlider.css";
 import Button from "../components/Button";
 import "../styles/space.css";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import UnderlineOnly from "./UnderlineOnly";
+import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const products = [
   {
-    title: "Sliding Doors",
+    title: "Bathroom Partitions",
     content:
-      "Sliding doors open horizontally along a smooth track, offering a modern, space-saving solution. Perfect for homes and offices, they provide easy access and a sleek look for patios, wardrobes, and interiors.",
+      "Durable, low-maintenance partitions in stainless steel, HPL, and powder-coated metal—ideal for commercial restrooms.",
     image: product1,
   },
   {
-    title: "Open Door Frame",
+    title: "LED Mirrors ",
     content:
-      "An open door frame features a profile without an integral stop or soffit, creating a clean and flat appearance. Commonly used for double-acting doors or doors with rescue hardware, this type of frame offers both functionality and a modern aesthetic.",
-    image: product1,
+      "Sleek, energy-efficient mirrors with built-in lighting—perfect for modern bathrooms and dressing areas.",
+    image: product2,
+  },
+  {
+    title: "Office Partitions",
+    content:
+      "We provide versatile and modern office partitions that create organized, functional workspaces.",
+    image: product3,
   },
   {
     title: "Open Shutters",
     content:
-      "Made from durable aluminum, open profile shutters feature adjustable slats for controlling light and privacy. They offer a sleek look with full open and close functionality, ideal for both homes and commercial spaces.",
-    image: product1,
+      "Sleek and durable open shutters designed for easy access, ventilation, and modern aesthetics.",
+    image: product4,
   },
   {
-    title: "LED Mirror",
+    title: "Pooja Doors",
     content:
-      "LED mirrors combine style and function, offering bright, even lighting. Perfect for bathrooms and low-light areas, they add a modern, energy-efficient touch to any space — enhancing visibility, elegance, and ambience.",
-    image: product1,
+      "Elegant and traditional pooja doors crafted to enhance the spiritual ambiance of your prayer space.",
+    image: product5,
   },
   {
-    title: "Profile Partition",
+    title: "Profile Doors",
     content:
-      "Profile partitions are sleek aluminum frameworks used to create fixed or movable divisions. Ideal for separating rooms or defining areas, they offer a modern look and flexible layout for residential and commercial spaces.",
-    image: product1,
+      "Sleek, modern profile doors with aluminum or uPVC frames, offering durability, style, and low maintenance for contemporary interiors.",
+    image: product6,
   },
   {
-    title: "Printed LED Wall Frame",
+    title: "Profile Showcases",
     content:
-      "A printed LED wall frame features an aluminum profile with built-in LED strip lights.It combines lighting with customizable graphics for a sleek, modern look.Perfect for branding, décor, or ambient lighting in homes and commercial spaces.",
-    image: product1,
+      "Elegant profile showcases made with aluminum or uPVC frames, ideal for stylish displays in homes or commecial .",
+    image: product7,
+  },
+  {
+    title: "Sliding Doors",
+    content:
+      "Stylish, space-saving sliding doors for modern homes and offices, enhancing light, flow, and accessibility.",
+    image: product8,
+  },
+  {
+    title: "Walk-in Closet",
+    content:
+      "Spacious, organized, and stylish walk-in closets designed to maximize storage while enhancing the aesthetics of your room.",
+    image: product9,
+  },
+  {
+    title: "Wardrobe Sliding Door",
+    content:
+      "Sleek and space-saving sliding wardrobe doors for a modern, organized, stylish, and clutter-free look.",
+    image: product10,
   },
 ];
 
 const ProductSlider = () => {
   return (
-    <div className="p-5">
+    <div className="p-space">
       <div className="container-fluid">
-        <h2 className="title text-center mb-2">Our Products</h2>
+        <h2 className="title text-center mb-4">
+          Our <span className="color-text">Products</span>
+        </h2>
         <UnderlineOnly className="mb-30" />
         <div className="product-slider-container">
           <Slider
             items={products}
             renderItem={(product, index) => (
               <div className="product-card" key={index}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="product-image"
-                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  whileHover={{
+                    scale: 1.05,
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <LazyLoadImage
+                    src={product.image}
+                    alt={product.title}
+                    effect="blur"
+                    className="product-image"
+                  />
+                </motion.div>
                 <h5 className="product-title">{product.title}</h5>
                 <p>{product.content}</p>
-                <Button
-                  text="Read More"
-                  className="read-more btn-center "
-                  icon={ArrowRightAltIcon}
-                />
+                <div className="justify-content-center">
+                  <a href="/slider-door" style={{ textDecoration: "none" }}>
+                    {" "}
+                    <Button
+                      text="Read More"
+                      className="read-more btn-center"
+                      icon={ArrowRightAltIcon}
+                    />
+                  </a>
+                </div>
               </div>
             )}
             slidesPerView={3}
             spaceBetween={30}
             showPagination={false}
             showNavigation={false}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1025: {
+                slidesPerView: 3,
+              },
+            }}
           />
         </div>
       </div>

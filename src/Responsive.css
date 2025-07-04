@@ -1,0 +1,384 @@
+/* ---------- Mobile (max-width: 767px) ---------- */
+@media (max-width: 767px) {
+  .desktop-banner {
+    display: none;
+  }
+
+  .mobile-banner {
+    display: block;
+  }
+  .breadcrumb-container {
+    padding: 80px;
+    color: white;
+  }
+  h1 {
+    font-size: 24px !important; /* For tablets and smaller devices */
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.875rem;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+  }
+
+  .product-card .product-title {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 1.25rem !important; /* 24px for mobile - perfect */
+  }
+  .video-content h4 {
+    font-size: 18px;
+  }
+  .working-process h4 {
+    font-size: 18px;
+  }
+  .working-process h5 {
+    font-size: 18px;
+  }
+  .we-are .sub-title {
+    font-size: 18px;
+  }
+  .blog-card-mobile h3 {
+    font-size: 18px;
+  }
+  .count-numbers.stats-number {
+    font-size: 18px;
+  }
+  .img-text {
+    font-size: 18px !important;
+  }
+  .whychoose-sub-title {
+    font-size: 18px !important;
+  }
+
+  .mobile-header {
+    display: contents;
+  }
+
+  .abt-slider {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 40px;
+    background-color: #fdfdfd;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-content {
+    max-width: 600px;
+    padding: 0 20px;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+  }
+
+  .read-more {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .read-more:hover {
+    background-color: #e5533d;
+  }
+
+  .icon-size {
+    font-size: 28px;
+  }
+
+  .btn-abt {
+    margin-bottom: 30px;
+  }
+
+  .video-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: auto !important;
+  }
+
+  .p-space {
+    padding: 10px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .blog-card {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #aeaeae;
+    min-height: 450px !important;
+    max-height: 550px !important;
+    overflow: hidden;
+  }
+
+  .blog-card-mobile {
+    padding: 15px;
+  }
+
+  .stats-card {
+    background: #fff;
+    padding: 40px 30px;
+    width: 100% !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .testimonial-width {
+    width: 400px !important;
+  }
+}
+
+/* ---------- Tablets (768px - 1024px) ---------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-nav .nav-link,
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+    font-weight: 600;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 420px !important;
+    min-height: 476px !important;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-container {
+    display: flex;
+    padding: 40px;
+    color: #333;
+    height: auto;
+  }
+
+  .video-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .top-header {
+    display: none !important;
+  }
+
+  .testimonial-card {
+    height: 100% !important;
+  }
+
+  .product-card {
+    height: 580px !important;
+  }
+
+  .whychoose-card {
+    margin-bottom: 0;
+  }
+
+  .btn-abt {
+    margin-bottom: 30px;
+  }
+
+  .small-slider-container {
+    margin: -20px -40px -90px 20px;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between !important;
+    gap: 550px;
+    align-items: baseline;
+  }
+
+  .phone-numbers {
+    display: flex;
+    gap: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px !important;
+  }
+}
+
+/* ---------- Landscape tablets (601px - 1024px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+  .stats-card {
+    height: 225px;
+  }
+
+  .blog-card {
+    height: 550px !important;
+    min-height: 450px;
+  }
+}
+
+/* ---------- iPad Portrait (834px - 1024px) ---------- */
+@media (min-device-width: 834px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .phone-numbers {
+    font-size: 15px !important;
+  }
+
+  .blog-card {
+    min-height: 550px !important;
+  }
+
+  .stats-card {
+    height: 250px;
+  }
+}
+
+/* ---------- Mid Screens (768px - 1023px) ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar-nav .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Desktops (992px+) ---------- */
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    font-weight: 600;
+  }
+}
+
+/* ---------- Title font sizes ---------- */
+@media (min-width: 600px) {
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .stats-card {
+    background: #fff;
+    padding: 40px 30px;
+    width: 100% !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* ---------- Desktop blog/product card heights (1335px - 1757px) ---------- */
+@media (min-width: 1335px) and (max-width: 1757px) {
+  .product-card {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-card p {
+    flex-grow: 1;
+  }
+
+  .read-more {
+    margin-top: auto;
+  }
+}
+
+/* ---------- Card gap fix (1200px - 1339px) ---------- */
+@media (min-width: 1200px) and (max-width: 1339px) {
+  .stats-section .col-md-3 {
+    padding: 0 15px;
+  }
+
+  .stats-section .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+/* ---------- Blog card desktop (1200px - 1920px) ---------- */
+@media (min-width: 1200px) and (max-width: 1920px) {
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    min-height: 450px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .blog-card-mobile {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .blog-btn {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-banner {
+    display: none;
+  }
+}

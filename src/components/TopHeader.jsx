@@ -2,23 +2,12 @@ import React from "react";
 import "../styles/TopHeader.css";
 import Telephone from "./Telephone";
 import Email from "./Email";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 // Material UI Icons
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email"; // ✅ Add this
-
-const socialLinks = [
-  { icon: <InstagramIcon />, url: "#", label: "Instagram" },
-  { icon: <FacebookIcon />, url: "#", label: "Facebook" },
-  { icon: <YouTubeIcon />, url: "#", label: "YouTube" },
-  { icon: <LinkedInIcon />, url: "#", label: "LinkedIn" },
-  { icon: <TwitterIcon />, url: "#", label: "Twitter" },
-];
 
 const TopHeader = () => {
   return (
@@ -30,28 +19,17 @@ const TopHeader = () => {
               <PhoneIcon
                 style={{ verticalAlign: "middle", marginRight: "5px" }}
               />
-              <Telephone />
+              <Telephone showSemicolon={true} />
             </div>
             <div className="email-details">
               <EmailIcon
                 style={{ verticalAlign: "middle", marginRight: "5px" }}
               />
-              <Email />
+              <Email showSemicolon={true} />
             </div>
           </div>
           <div className="right">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                style={{ color: "white", marginLeft: "15px" }}
-              >
-                {social.icon}
-              </a>
-            ))}
+            <SocialMediaIcons className="top-header-icons" />
           </div>
         </div>
       </div>

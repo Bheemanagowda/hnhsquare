@@ -3,7 +3,7 @@ import "../styles/FAQSection.css";
 import doctorImage from "../assets/images/faq/faq.png";
 import bgImage from "../assets/images/faq/bg.jpg";
 import UnderlineOnly from "./UnderlineOnly";
-
+import { motion } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const faqs = [
@@ -58,7 +58,7 @@ const FAQSection = () => {
 
   return (
     <div
-      className="faq-container p-5"
+      className="faq-container p-space"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -68,12 +68,14 @@ const FAQSection = () => {
       }}
     >
       <div className="container">
+        <h2 className="title text-white mb-4">FAQ'S</h2>
+        <div className="underline-wrapper-left">
+          <UnderlineOnly className="who-we-are mb-4 border-color" />
+        </div>
+
         <div className="row">
-          <div className="col-md-6 faq-left">
-            <h2 className="title text-white text-center mb-4">FAQ'S</h2>
-
-            <UnderlineOnly className="mb-30 .who-we-are border-color" />
-
+          {/* FAQ List Section */}
+          <div className=" col-12 col-lg-6   mb-4 mb-md-0" data-aos="fade-left">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -93,11 +95,20 @@ const FAQSection = () => {
             ))}
           </div>
 
-          <div className="col-md-6 faq-right">
-            <img
+          {/* Image Section */}
+          <div className="col-12 col-lg-6  text-center" data-aos="fade-right">
+            <motion.img
               src={doctorImage}
               alt="Doctor and Patient"
               className="doctor-img"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+              }}
+              whileTap={{ scale: 0.95 }}
             />
           </div>
         </div>

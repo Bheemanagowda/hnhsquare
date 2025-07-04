@@ -1,59 +1,110 @@
-import React from "react";
-import "../styles/Gallery.css";
-// Import images
-import shutters1 from "../assets/images/gallery/1.jpg";
-import doors from "../assets/images/gallery/2.jpg";
-import sliding from "../assets/images/gallery/3.jpg";
-import sliding1 from "../assets/images/gallery/4.jpg";
-import doors1 from "../assets/images/gallery/5.jpg";
-import shutters2 from "../assets/images/gallery/6.jpg";
-import "../styles/space.css";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import UnderlineOnly from "./UnderlineOnly";
+import "../styles/Gallery.css";
 
-const Collections = () => {
-  const images = [
-    { id: 0, image: shutters1, title: "Shutters" },
-    { id: 1, image: doors, title: "Doors" },
-    { id: 2, image: sliding, title: "Sliding Doors" },
-    { id: 3, image: sliding1, title: "Partition Frame" },
-    { id: 4, image: doors1, title: "Shower Partitions" },
-    { id: 5, image: shutters2, title: "LED Mirrors" },
-  ];
+const Collections = ({
+  images,
+  columnClass = "col-md-4",
+  layoutType,
+  title,
+  className = "",
+}) => {
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Split into rows of 3 images each
   const chunkedImages = [];
-  for (let i = 0; i < images.length; i += 3) {
-    chunkedImages.push(images.slice(i, i + 3));
+
+  if (layoutType === "home") {
+    chunkedImages.push(images.slice(0, 3)); // First row
+    chunkedImages.push(images.slice(3, 6)); // Second row
+  } else {
+    for (let i = 0; i < images.length; i += 3) {
+      chunkedImages.push(images.slice(i, i + 3));
+    }
   }
 
+  const openLightbox = (index) => {
+    setCurrentIndex(index);
+    setOpen(true);
+  };
+
   return (
-    <div className="p-5">
-      <h2 className="title text-center mb-2">Collections</h2>
-      <UnderlineOnly className="mb-30" />
-      <div className="container-fluid ">
+    <div className={className}>
+      {title && (
+        <>
+          <h2 className="title text-center mb-4">
+            {title} <span className="color-text">Collections</span>
+          </h2>
+          <UnderlineOnly className="mb-30" />
+        </>
+      )}
+
+      <div className="container-fluid">
         {chunkedImages.map((group, rowIndex) => (
           <div className="row" key={rowIndex}>
             {group.map((item, index) => {
-              // Alternate layout by row
-              let colClass = "col-md-4 mb-4";
-              if (rowIndex % 2 === 0) {
-                colClass = index === 0 ? "col-md-6 mb-4" : "col-md-3 mb-4";
-              } else {
-                colClass = index === 1 ? "col-md-6 mb-4" : "col-md-3 mb-4";
+              let colClass = columnClass;
+
+              if (layoutType === "home") {
+                if (rowIndex === 0) {
+                  colClass = index === 0 ? "col-md-6 mb-4" : "col-md-3 mb-4";
+                } else if (rowIndex === 1) {
+                  colClass = index === 1 ? "col-md-6 mb-4" : "col-md-3 mb-4";
+                }
               }
+
+              const globalIndex =
+                layoutType === "home"
+                  ? rowIndex * 3 + index
+                  : rowIndex * 3 + index;
 
               return (
                 <div key={item.id} className={colClass}>
-                  <div className="img-box">
-                    <img src={item.image} alt={`Gallery ${item.id + 1}`} />
-                    <div className="img-text">{item.title}</div>
-                  </div>
+                  <motion.div
+                    className="img-box position-relative overflow-hidden rounded"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+                    }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => openLightbox(globalIndex)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <motion.img
+                      src={item.image}
+                      alt={item.title || ""}
+                      loading="lazy"
+                      className="img-fluid w-100 rounded"
+                      style={{
+                        objectFit: "cover",
+                        width: "100%",
+                        height: layoutType === "gallery" ? "389px" : "100%",
+                      }}
+                    />
+                    {layoutType === "home" && (
+                      <div className="img-text">{item.title}</div>
+                    )}
+                  </motion.div>
                 </div>
               );
             })}
           </div>
         ))}
       </div>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={currentIndex}
+        slides={images.map((img) => ({ src: img.image }))}
+      />
     </div>
   );
 };

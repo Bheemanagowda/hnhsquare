@@ -1,0 +1,11 @@
+.mobile-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mobile-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Optional: cover image inside slide */
+}

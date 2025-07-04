@@ -1,0 +1,38 @@
+.breadcrumb-container {
+  padding: 150px;
+
+  color: white;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 40px;
+  color: white;
+  justify-content: center;
+}
+
+.breadcrumb-item {
+  font-size: 16px;
+  color: white;
+  margin-right: 8px;
+}
+
+.breadcrumb-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-item::after {
+  content: "|";
+  margin-left: 8px;
+  color: white;
+}
+
+.breadcrumb-item:last-child::after {
+  content: "";
+}
+.breadcrumb-item.active {
+  color: #b21001 !important;
+}

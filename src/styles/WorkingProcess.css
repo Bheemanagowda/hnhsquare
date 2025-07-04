@@ -1,0 +1,21 @@
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  background-color: #dc3545 !important; /* Bootstrap red */
+  color: #ffffff !important;
+}
+
+.card-hover:hover h5,
+.card-hover:hover p {
+  color: #ffffff !important;
+}
+
+.step-number {
+  font-size: 1.1rem;
+}
+.work-process-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}

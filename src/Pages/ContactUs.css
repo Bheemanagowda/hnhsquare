@@ -1,0 +1,21 @@
+.card-hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-hover:hover {
+  background-color: #b21001;
+  color: #fff;
+}
+
+.card-hover:hover h6,
+.card-hover:hover p,
+.card-hover:hover a {
+  color: #fff !important;
+}
+
+.card .contact-details {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  text-align: center !important;
+}

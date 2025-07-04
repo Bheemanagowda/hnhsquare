@@ -106,3 +106,28 @@ footer .footer-bottom {
   background-color: rgb(193 50 34) !important;
   border-radius: 10px;
 }
+
+.footer-social-icons .MuiIconButton-root {
+  background-color: #c13222;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-social-icons .MuiIconButton-root:hover {
+  background-color: darkred;
+}
+.quick-links li a {
+  text-decoration: none; /* Prevent underline by default */
+  color: inherit; /* Optional: inherits text color */
+}
+
+.quick-links li a:hover {
+  text-decoration: none; /* Ensures no underline on hover */
+  color: #c13222; /* Hover color */
+}
+.contact-text p:hover {
+  color: #c13222;
+}
+.contact-text a:hover {
+  color: #c13222;
+}

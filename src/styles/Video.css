@@ -2,7 +2,6 @@
 .video-wrapper {
   max-width: 1400px; /* Adjust this value for smaller size */
   margin: 0 auto;
-  height: 700px;
 }
 
 .responsive-video video {

@@ -1,10 +1,18 @@
 /* Apply to body */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #262626; /* You can use any color you like */
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   background: #000; /* optional */
   font-family: "Montserrat", sans-serif !important;
+  overflow-x: hidden !important;
 }
 
 /* Apply to header or any main container */
@@ -85,7 +93,7 @@ body {
 }
 
 .about-img {
-  width: 400px;
+  width: 100%;
   height: 200px !important;
   height: auto;
   border-radius: 8px;
@@ -175,13 +183,17 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.email a:hover {
+  text-decoration: none;
+  color: #c63022;
+}
 .abt-info h2 {
   font-family: "Montserrat", sans-serif;
 }
 
 .whychoose-sub-title {
   margin-bottom: 15px;
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 900;
   color: #262626;
 }
@@ -201,8 +213,42 @@ body {
   color: #000000;
 }
 .navbar-nav a {
-  font-size: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 15px;
 }
 .color-text {
   color: #b61906;
+}
+.my-text-primary {
+  color: var(--primary-color);
+}
+.whychoose-sub-title:hover {
+  color: #b31000;
+}
+.sub-title:hover {
+  color: #b31000;
+}
+.text-muted {
+  margin-bottom: 0px;
+}
+.about-us-section {
+  background-image: url("../assets/images/bg/section-bg-shape-2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-link {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+.breadcrumb-item::after {
+  content: "|";
+  margin-left: 8px;
+  color: white;
+  display: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white !important;
 }

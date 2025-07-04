@@ -12,7 +12,7 @@
 .stats-card {
   background: #fff;
   padding: 40px 30px;
-  width: 300px;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
@@ -40,6 +40,9 @@
   font-weight: 600;
   color: #000;
   font-family: "Montserrat", sans-serif;
+}
+.stats-label:hover {
+  color: #bf3221;
 }
 .stats-title {
   color: #fff;

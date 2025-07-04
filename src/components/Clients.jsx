@@ -14,62 +14,67 @@ import clientLogo5 from "../assets/images/vendors/5.jpg";
 import clientLogo6 from "../assets/images/vendors/6.jpg";
 
 const Clients = () => {
-  // Create an array with repeated instances of the same logo
-  // This will make the slider visibly slide through multiple "client" logos
+  // Array of logo image paths
   const clientLogoImages = [
-    clientLogo1, // Logo 1
-    clientLogo2, // Logo 2 (repeated)
-    clientLogo3, // Logo 3 (repeated)
-    clientLogo4, // Logo 4 (repeated)
-    clientLogo5, // Logo 5 (repeated)
-    clientLogo6, // Logo 6 (repeated)
+    clientLogo1,
+    clientLogo2,
+    clientLogo3,
+    clientLogo4,
+    clientLogo5,
+    clientLogo6,
   ];
 
-  console.log("Client Logo Image Paths:", clientLogoImages);
-
-  // Define breakpoints for responsive behavior of the client logo slider
+  // Breakpoints for responsive slider
   const clientLogoBreakpoints = {
-    // When screen width is 320px or less, show 2 slides
     320: {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    // When screen width is 480px or less, show 3 slides
     480: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-    // When screen width is 768px or less, show 4 slides
     768: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
-    // When screen width is 1024px or less, show 5 slides
     1024: {
       slidesPerView: 5,
       spaceBetween: 40,
     },
-    // When screen width is 1200px or less, show 6 slides (default for larger screens)
     1200: {
       slidesPerView: 4,
       spaceBetween: 50,
     },
   };
 
+  // Render each image with lazy loading inside the Slider
+  const renderLogo = (logo, index) => (
+    <img
+      key={index}
+      src={logo}
+      alt={`Client Logo ${index + 1}`}
+      loading="lazy"
+      className="client-logo-image shadow"
+    />
+  );
+
   return (
-    <section className="client-logos-section p-5">
+    <section className="client-logos-section p-space">
       <div className="container">
-        <h2 className="text-center mb-2">Our Partners</h2>
+        <h2 className="text-center title mb-4">
+          Our <span className="color-text"> Partners</span>
+        </h2>
         <UnderlineOnly className="mb-30" />
         <Slider
-          images={clientLogoImages} // Pass the array of repeated logos
-          className="client-slider-container " // For overall styling of the slider
-          imageClassName="client-logo-image shadow" // For styling individual logo images
-          showPagination={false} // Typically, client logo sliders don't need pagination dots
-          showNavigation={false} // Typically, client logo sliders don't need navigation arrows
-          slidesPerView={6} // Default number of logos to show for large screens (over 1200px)
-          spaceBetween={50} // Default space between logos for large screens
-          breakpoints={clientLogoBreakpoints} // Apply responsive settings
+          items={clientLogoImages} // Pass the logos
+          renderItem={renderLogo} // Use render function to include lazy loading
+          className="client-slider-container"
+          showPagination={false}
+          showNavigation={false}
+          slidesPerView={6}
+          spaceBetween={50}
+          breakpoints={clientLogoBreakpoints}
         />
       </div>
     </section>

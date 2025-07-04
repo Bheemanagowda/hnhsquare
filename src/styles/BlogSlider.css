@@ -1,0 +1,152 @@
+.blog-slider-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.blog-slider-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-card {
+  flex: 1 1 30%; /* Adjust width per card */
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #aeaeae;
+
+  min-height: 650px; /* ✅ Ensures consistent height */
+  max-height: 650px; /* ✅ Prevents extra height if content is more */
+  overflow: hidden; /* ✅ Prevents overflow */
+}
+.blog-card button {
+  margin-bottom: 20px;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  padding: 20px;
+}
+
+.blog-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.blog-card-text {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.blog-card-date {
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-card-body {
+    padding: 15px;
+  }
+
+  .blog-card-title {
+    font-size: 18px;
+  }
+
+  .blog-card-text {
+    font-size: 14px;
+  }
+}
+.read-more-btn {
+  margin-top: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2563eb; /* Tailwind blue-600 */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.read-more-btn:hover {
+  color: #1d4ed8; /* Tailwind blue-700 */
+}
+.blog-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-title:hover {
+  color: #b10e00;
+}
+.blog-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-btn {
+  /* ❌ Remove or avoid these if present */
+  float: right;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px; /* You can adjust this value */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .blog-card-mobile {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .blog-btn {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+}

@@ -15,7 +15,7 @@
 
 .top-header .right a {
   color: white;
-  margin-left: 15px;
+
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -37,6 +37,7 @@
 .left {
   display: flex;
   gap: 20px;
+  margin-top: 5px;
 }
 .phone-numbers {
   display: flex;
@@ -47,4 +48,19 @@
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+}
+.top-header-icons .MuiIconButton-root {
+  background-color: black;
+  color: white;
+  border-radius: 50%; /* makes it a circle */
+  padding: 8px; /* control the size of the circle */
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.top-header-icons .MuiIconButton-root:hover {
+  background-color: #fff; /* slightly lighter on hover */
+}
+.top-header-icons .MuiSvgIcon-root {
+  font-size: 18px; /* default is 24px; adjust as needed */
 }

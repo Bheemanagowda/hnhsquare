@@ -2,6 +2,7 @@ import React from "react";
 import wpIcon from "../assets/images/whatsapp-png-logo-7.png";
 import wpSmall from "../assets/images/wp.png";
 import "../styles/WhatsAppWidget.css";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const WhatsAppWidget = () => {
   return (
@@ -30,10 +31,7 @@ const WhatsAppWidget = () => {
       <div className="mobile-icons" style={{ zIndex: 9999, paddingTop: 5 }}>
         <div>
           <a href="tel:+919742545784">
-            <i
-              className="my-icon icon-call-solid"
-              style={{ fontSize: 25, color: "#fff" }}
-            ></i>
+            <PhoneIcon style={{ fontSize: 25, color: "#fff" }} />
             <p style={{ color: "#fff" }}>CALL NOW</p>
           </a>
         </div>

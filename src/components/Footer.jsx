@@ -1,28 +1,21 @@
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "../styles/Footer.css";
 import footerlogo from "../assets/images/logo/footer.jpg";
 import footerBg from "../assets/images/bg/footer-bg.jpg";
 import qrcode from "../assets/images/qrcode/qrcode.png";
 import "../styles/space.css";
+
 import Telephone from "./Telephone";
 import Email from "./Email";
 import UnderlineOnly from "./UnderlineOnly";
-
-// Import your background image
-// Assuming the path to your background image
+import SocialMediaIcons from "./SocialMediaIcons";
+import CompanyLocations from "./CompanyLocations";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 const Footer = () => {
   return (
     <footer
-      className="bg-dark text-white pt-5 "
+      className="bg-dark text-white pt-5"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: "cover",
@@ -32,84 +25,99 @@ const Footer = () => {
       <div className="container">
         <div className="row pb-5">
           {/* Logo and About */}
-          <div className="col-md-3 mb-4">
+          <div
+            className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="footer-logo">
               <img src={footerlogo} alt="HNH SQUARE PROFILE" className="mb-3" />
             </div>
-            {/* <p className="footer-para">
-              At HNH SQUARE PROFILE, we blend refined aesthetics with
-              cutting-edge craftsmanship to redefine modern interiors.
-            </p> */}
             <div className="d-flex gap-2 mt-3">
-              <div className="bg-secondary p-3 ">
-                <FaFacebookF />
-              </div>
-              <div className="bg-secondary p-3 ">
-                <FaInstagram />
-              </div>
-              <div className="bg-secondary p-3 ">
-                <FaTwitter />
-              </div>
-              <div className="bg-secondary p-3 ">
-                <FaLinkedinIn />
-              </div>
+              <SocialMediaIcons className="footer-social-icons" />
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="col-md-2 mb-4">
-            <h5 className="mb-3 footer-title mb-2">Quick Links</h5>
+          <div
+            className="col-12 col-sm-6 col-md-6 col-lg-2 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h5 className="mb-3 footer-title mb-4">Quick Links</h5>
             <div className="underline-wrapper-left">
               <UnderlineOnly className="footer-underline mb-4" />
             </div>
             <ul className="list-unstyled quick-links">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Projects</li>
-              <li>Careers</li>
-              <li>Contact Us</li>
+              <li>
+                <a href="/home">Home</a>
+              </li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="">Products</a>
+              </li>
+              <li>
+                <a href="/gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="/clients">Clients</a>
+              </li>
+              <li>
+                <a href="/careers">Careers</a>
+              </li>
+              <li>
+                <a href="/blogs">Blogs</a>
+              </li>
+              <li>
+                <a href="/contactus">Contact Us</a>
+              </li>
             </ul>
           </div>
 
-          <div className="col-md-3 mb-4">
-            <h5 className="mb-3 footer-title mb-2">Qr Code</h5>
+          {/* QR Code */}
+          <div
+            className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h5 className="mb-3 footer-title mb-4">Qr Code</h5>
             <div className="underline-wrapper-left">
               <UnderlineOnly className="footer-underline mb-4" />
             </div>
             <div className="qrcode">
-              {/* Ensure this path is correct if qr-code.png is not in the public folder */}
               <img src={qrcode} alt="HNH SQUARE PROFILE" />
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="col-md-4 mb-4">
-            <h5 className="mb-2 footer-title ">Contact Us</h5>
+          <div
+            className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <h5 className="mb-4 footer-title">Contact Us</h5>
             <div className="underline-wrapper-left">
               <UnderlineOnly className="footer-underline border-color mb-4" />
             </div>
-            <div className="d-flex align-items-start mb-2 contact-text">
-              <FaMapMarkerAlt
-                className="me-2  icon"
-                style={{ width: "40px" }}
+            <div className="d-flex align-items-start contact-text">
+              <FaMapMarkerAlt className="me-2 icon" style={{ width: "40px" }} />
+              <CompanyLocations
+                locationClass="text-start"
+                showSemicolon={true}
               />
-
-              <p>
-                : No.85, Near Anjeeneya Temple, 11th Cross, Gangonallhi, Near
-                Vijaynagar, Mysore Road, Bangalore, Karnataka 560039
-              </p>
             </div>
-            <div className="d-flex align-items-center mb-2  contact-text">
+            <div className="d-flex align-items-center contact-text">
               <FaPhoneAlt className="me-2 icon" />
               <p>
-                <Telephone />
+                <Telephone showSemicolon={true} />
               </p>
             </div>
-            <div className="d-flex align-items-center  contact-text">
+            <div className="d-flex align-items-center contact-text">
               <FaEnvelope className="me-2 icon" />
               <p>
-                <Email />
+                <Email showSemicolon={true} />
               </p>
             </div>
           </div>
@@ -117,7 +125,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center py-3 copyright-bg ">
+      <div className="text-center py-3 copyright-bg">
         <p>
           © 2025 <strong>HNH SQUARE PROFILE</strong>, All Rights Reserved.
         </p>

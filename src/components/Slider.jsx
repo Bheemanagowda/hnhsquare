@@ -5,7 +5,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/BannerSlider.css"; // Optional: For your custom styles
+import "./Slider.module.css"; // Optional: For your custom styles
 
 const Slider = ({
   images = [], // Used for image sliders
