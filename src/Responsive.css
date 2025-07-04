@@ -19,6 +19,10 @@
     font-family: "Montserrat", sans-serif;
     color: #000;
   }
+  .breadcrumb-container {
+    padding: 70px !important;
+    color: #fff;
+  }
 
   .product-card .product-title {
     font-size: 18px;
