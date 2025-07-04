@@ -3,7 +3,7 @@ import "../styles/Telephone.css";
 
 const phoneNumbers = [
   { number: "+91 9886540411", label: "Customer Care" },
-  { number: "+91 08026322085", label: "Support" },
+  { number: "08026322085", label: "Support" },
 ];
 
 const Telephone = ({ icon, title, className = "", showSemicolon = false }) => {
