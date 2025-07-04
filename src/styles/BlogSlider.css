@@ -12,7 +12,7 @@
   flex: 1 1 30%; /* Adjust width per card */
   display: flex;
   flex-direction: column;
-
+  overflow: hidden;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -128,7 +128,7 @@
     min-height: 450px; /* You can adjust this value */
     background: #fff;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
