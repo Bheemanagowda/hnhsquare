@@ -11,5 +11,8 @@ export default defineConfig({
     allowedHosts: ["edb0-2406-7400-56-2304-dd29-eed4-ea54-429.ngrok-free.app", '.loca.lt'], // allow all loca.lt URLs
     // allowedHosts: ['.loca.lt'], // allow all loca.lt URLs
   },
+   build: {
+    chunkSizeWarningLimit: 1000 // <- Increase limit from default 500 KB
+  }
  
 });
