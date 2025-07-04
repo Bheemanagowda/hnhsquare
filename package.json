@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -17,6 +16,7 @@
     "@mui/material": "^7.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.6",
+    "find-up": "^6.3.0",
     "framer-motion": "^12.19.1",
     "lucide-react": "^0.516.0",
     "motion": "^12.19.1",
@@ -27,7 +27,6 @@
     "react-icons": "^5.5.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^7.6.2",
-   
     "swiper": "^11.2.8",
     "yet-another-react-lightbox": "^3.23.4"
   },
