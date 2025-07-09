@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from "react";
 import BannerSlider from "../components/BannerSlider";
+
 import AboutUs from "../components/AboutUs";
 import WhychooseUs from "../components/WhychooseUs";
 import ProductSlider from "../components/ProductSlider";
@@ -22,8 +24,20 @@ import img4 from "../assets/images/gallery/pooja-doors.jpg";
 import img5 from "../assets/images/gallery/bathroom-partition.jpg";
 import img6 from "../assets/images/gallery/wardrobe-sliding.jpg";
 import MobileBanner from "../components/MobileBanner";
+import WelcomeModal from "../components/WelcomeModal";
 
 function Home() {
+  const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 1000);
+    return () => clearTimeout(timer); // cleanup
+  }, []);
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   const galleryImages = [
     { id: 0, image: img1, title: "LED Mirrors" },
     { id: 1, image: img2, title: "Walkin Closet" },
@@ -62,6 +76,9 @@ function Home() {
       <FAQSection />
       <BlogSlider />
       <Clients />
+      {showModal && (
+        <WelcomeModal show={showModal} handleClose={handleCloseModal} />
+      )}
     </div>
   );
 }
