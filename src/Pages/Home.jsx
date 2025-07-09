@@ -27,17 +27,6 @@ import MobileBanner from "../components/MobileBanner";
 import WelcomeModal from "../components/WelcomeModal";
 
 function Home() {
-  const [showModal, setShowModal] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 1000);
-    return () => clearTimeout(timer); // cleanup
-  }, []);
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
   const galleryImages = [
     { id: 0, image: img1, title: "LED Mirrors" },
     { id: 1, image: img2, title: "Walkin Closet" },
@@ -76,9 +65,7 @@ function Home() {
       <FAQSection />
       <BlogSlider />
       <Clients />
-      {showModal && (
-        <WelcomeModal show={showModal} handleClose={handleCloseModal} />
-      )}
+      <WelcomeModal />
     </div>
   );
 }

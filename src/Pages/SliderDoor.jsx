@@ -5,7 +5,6 @@ import SidebarServices from "../components/SidebarServices";
 import Slider1 from "../assets/images/inner-products/slider-door/1.jpg";
 import Slider2 from "../assets/images/inner-products/slider-door/2.jpg";
 import Slider3 from "../assets/images/inner-products/slider-door/3.jpg";
-
 import Breadcrumb from "../components/Breadcrumb";
 import breadcrumbBg from "../assets/images/bg/innerbg3.jpg";
 import Button from "../components/Button";
@@ -28,6 +27,7 @@ const features = [
 const description =
   "At HNH Square Profile, our Sliding Doors are crafted to bring together style, space-efficiency, and superior performance. Designed for both modern homes and commercial environments, these doors provide a smooth, quiet glide with a sleek, contemporary appearance.";
 
+// ✅ Add these:
 const extraTitle = "Why Choose HNH Square Profile?";
 const extraContent =
   "We bring innovation and quality together in every design. Our Sliding Doors are more than just partitions—they’re elegant, reliable, and tailored to suit your space with precision and flair.";
@@ -41,12 +41,10 @@ const SliderDoor = () => {
   return (
     <>
       <Breadcrumb
-        pageTitle="Products"
+        pageTitle="Sliding Door"
         backgroundImage={breadcrumbBg}
-        showPageTitle={false}
-        blogTitle="Sliding Door"
+        className=""
       />
-
       <div className="container p-space">
         <div className="row">
           {/* Sidebar */}
@@ -70,7 +68,7 @@ const SliderDoor = () => {
               className="d-flex justify-content-end mt-4"
               onClick={handleShow}
             >
-              <Button text="Enquiry Now" className="read-more" />
+              <Button text="Enquiry Now" className="read-more " />
             </div>
           </div>
         </div>
