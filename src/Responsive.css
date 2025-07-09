@@ -176,7 +176,7 @@
     color: #000;
   }
   .testimonial-card {
-    height: 500px;
+    height: 550px !important;
   }
 }
 
