@@ -96,7 +96,7 @@ const Gallery = () => {
         backgroundImage={breadcrumbBg}
         className=""
       />
-      <div className="container">
+      <div className="container overflow-hidden">
         <div className="gallery-page  py-5">
           <h2 className="text-center mb-4">
             Our <span className="color-text">Gallery</span>
