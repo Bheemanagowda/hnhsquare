@@ -20,7 +20,13 @@ function BlogDetails() {
 
   return (
     <>
-      <Breadcrumb pageTitle={blog.title} backgroundImage={breadcrumbBg} />
+      <Breadcrumb
+        pageTitle="Blogs"
+        backgroundImage={breadcrumbBg}
+        showPageTitle={false}
+        blogTitle={blog.title}
+      />
+
       <div className="container py-5">
         <div className="row">
           {/* Blog Content */}

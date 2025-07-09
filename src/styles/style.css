@@ -252,3 +252,7 @@ body {
 .breadcrumb-item + .breadcrumb-item::before {
   color: white !important;
 }
+
+ul.quick-links li a {
+  color: inherit !important; /* Optional: to ensure color isn't changed */
+}

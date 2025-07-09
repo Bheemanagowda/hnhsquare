@@ -1,5 +1,5 @@
 .blogs-page {
-  padding: 2rem;
+  padding: 0rem;
 }
 
 .blogs-title {
@@ -55,4 +55,13 @@
     /* Optional */
     height: auto;
   }
+}
+.blog-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: 4.5em; /* 1.5 * 3 lines */
 }

@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 import footerlogo from "../assets/images/logo/footer.jpg";
 import footerBg from "../assets/images/bg/footer-bg.jpg";
 import qrcode from "../assets/images/qrcode/qrcode.png";
+
 import "../styles/space.css";
 
 import Telephone from "./Telephone";
@@ -50,27 +51,35 @@ const Footer = () => {
             </div>
             <ul className="list-unstyled quick-links">
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/home">Home</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/about">About Us</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="">Products</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/gallery">Gallery</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/clients">Clients</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/careers">Careers</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/blogs">Blogs</a>
               </li>
               <li>
+                <KeyboardDoubleArrowRightIcon />
                 <a href="/contactus">Contact Us</a>
               </li>
             </ul>

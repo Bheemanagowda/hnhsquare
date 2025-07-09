@@ -3,6 +3,7 @@
   padding: 40px;
   color: #333;
   min-height: 100vh;
+  overflow: hidden !important;
 }
 
 .faq-left {

@@ -66,7 +66,7 @@ const WorkingProcess = () => {
               data-aos="fade-up"
               data-aos-delay={index * 500} // Add staggered animation
             >
-              <div className="position-relative border rounded p-4 shadow h-100 card-hover bg-white text-dark">
+              <div className="position-relative border working-info rounded p-4 shadow h-100 card-hover bg-white text-dark">
                 {/* Step number at top-right */}
                 <div
                   className="position-absolute bg-dark text-white rounded-circle d-flex align-items-center justify-content-center"

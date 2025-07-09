@@ -1,7 +1,12 @@
 import React from "react";
 import "../styles/Breadcrumb.css";
 
-const Breadcrumb = ({ pageTitle, backgroundImage }) => {
+const Breadcrumb = ({
+  pageTitle,
+  backgroundImage,
+  showPageTitle = true,
+  blogTitle,
+}) => {
   const breadcrumbStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
@@ -12,7 +17,11 @@ const Breadcrumb = ({ pageTitle, backgroundImage }) => {
   return (
     <div className="breadcrumb-container" style={breadcrumbStyle}>
       <nav aria-label="breadcrumb">
-        <h1 className="text-center mb-4">{pageTitle} </h1>
+        {showPageTitle && <h1 className="text-center mb-4">{pageTitle}</h1>}
+        {blogTitle && (
+          <h2 className="text-center blog-title mb-3">{blogTitle}</h2>
+        )}
+
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <a href="/">Home</a>
