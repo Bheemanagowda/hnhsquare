@@ -15,7 +15,7 @@ function Blogs() {
   return (
     <>
       <Breadcrumb pageTitle="Blogs" backgroundImage={breadcrumbBg} />
-      <div className="container p-5">
+      <div className="container py-5">
         <div className="blogs-page">
           <h2 className="title text-center mb-4">
             Our <span className="color-text">Blog</span> Posts
