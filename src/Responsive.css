@@ -175,6 +175,9 @@
     margin: 10px 0;
     color: #000;
   }
+  .testimonial-card {
+    height: 450px;
+  }
 }
 
 /* ---------- Tablets (768px - 1024px) ---------- */
