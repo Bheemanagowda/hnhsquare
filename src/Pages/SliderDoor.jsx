@@ -41,9 +41,10 @@ const SliderDoor = () => {
   return (
     <>
       <Breadcrumb
-        pageTitle="Sliding Door"
+        pageTitle="Products"
         backgroundImage={breadcrumbBg}
-        className=""
+        showPageTitle={false}
+        blogTitle="Sliding Door"
       />
       <div className="container p-space">
         <div className="row">
