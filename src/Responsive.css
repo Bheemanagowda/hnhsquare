@@ -178,6 +178,12 @@
   .testimonial-card {
     height: 450px !important;
   }
+  .card .contact-details {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px !important;
+    text-align: center !important;
+  }
 }
 
 /* ---------- Tablets (768px - 1024px) ---------- */
