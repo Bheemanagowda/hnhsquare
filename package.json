@@ -18,7 +18,7 @@
     "bootstrap": "^5.3.6",
     "find-up": "^6.3.0",
     "framer-motion": "^12.19.1",
-  
+    "lucide-react": "^0.516.0",
     "motion": "^12.19.1",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
