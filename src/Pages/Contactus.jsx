@@ -39,7 +39,7 @@ const ContactUs = () => {
                   icon={
                     <PhoneIcon style={{ color: "#b21001", fontSize: "40px" }} />
                   }
-                  className="contact-details"
+                  className="contact-details   "
                 />
               </div>
             </div>

@@ -304,3 +304,11 @@ ul.quick-links li a {
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
   border-radius: var(--bs-dropdown-border-radius);
 }
+.phone-numbers,
+.email-details {
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
