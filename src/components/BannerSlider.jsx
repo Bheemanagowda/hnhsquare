@@ -16,6 +16,7 @@ const BannerSlider = () => {
         images={bannerImages}
         showPagination={false}
         showNavigation={false}
+        className="w-full"
       />
     </div>
   );

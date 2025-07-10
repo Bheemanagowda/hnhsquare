@@ -312,3 +312,8 @@ ul.quick-links li a {
   align-items: center;
   justify-content: center;
 }
+.banner-img {
+  width: 100%;
+
+  object-fit: cover;
+}
