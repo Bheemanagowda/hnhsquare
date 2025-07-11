@@ -24,6 +24,7 @@ import SliderDoor from "./Pages/SliderDoor";
 import Blogs from "./Pages/Blogs";
 
 import BlogDetails from "./Pages/BlogDetails";
+import MainServices from "./components/MainServices";
 
 function App() {
   useAOS();
@@ -52,6 +53,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
+        <Route path="/" element={<MainServices />} />
       </Routes>
       <Footer />
       <ScrollButton />

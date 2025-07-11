@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import BannerSlider from "../components/BannerSlider";
 
 import AboutUs from "../components/AboutUs";
@@ -25,6 +24,8 @@ import img5 from "../assets/images/gallery/bathroom-partition.jpg";
 import img6 from "../assets/images/gallery/wardrobe-sliding.jpg";
 import MobileBanner from "../components/MobileBanner";
 import WelcomeModal from "../components/WelcomeModal";
+import MainServices from "../components/MainServices";
+// import MainServicePage from "../components/MainServicePage";
 
 function Home() {
   const galleryImages = [
@@ -46,6 +47,8 @@ function Home() {
         <MobileBanner />
       </div>
       <AboutUs />
+      <MainServices />
+      {/* <MainServicePage /> */}
       <WhychooseUs />
       <ProductSlider />
       <WhyhnhProfile />
