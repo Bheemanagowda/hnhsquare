@@ -8,7 +8,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const services = [
   {
-    id: "walkin-closet",
+    id: "interior-design",
     image: walkinCloset,
     title: "Interior Design",
     description:

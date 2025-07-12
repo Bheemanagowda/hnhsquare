@@ -23,9 +23,9 @@ import img4 from "../assets/images/gallery/pooja-doors.jpg";
 import img5 from "../assets/images/gallery/bathroom-partition.jpg";
 import img6 from "../assets/images/gallery/wardrobe-sliding.jpg";
 import MobileBanner from "../components/MobileBanner";
-import WelcomeModal from "../components/WelcomeModal";
+
 import MainServices from "../components/MainServices";
-// import MainServicePage from "../components/MainServicePage";
+import MainServicePage from "../components/MainServicePage";
 
 function Home() {
   const galleryImages = [
@@ -48,7 +48,7 @@ function Home() {
       </div>
       <AboutUs />
       <MainServices />
-      {/* <MainServicePage /> */}
+      <MainServicePage />
       <WhychooseUs />
       <ProductSlider />
       <WhyhnhProfile />
@@ -68,7 +68,6 @@ function Home() {
       <FAQSection />
       <BlogSlider />
       <Clients />
-      <WelcomeModal />
     </div>
   );
 }
