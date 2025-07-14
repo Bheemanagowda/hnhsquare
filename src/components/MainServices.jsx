@@ -15,7 +15,7 @@ const services = [
       "A stylish and spacious walk-in closet with optimized storage solutions.",
   },
   {
-    id: "profile-shutters",
+    id: "profile-section",
     image: openShutters,
     title: "Profile Section",
     description:

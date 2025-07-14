@@ -25,7 +25,6 @@ import img6 from "../assets/images/gallery/wardrobe-sliding.jpg";
 import MobileBanner from "../components/MobileBanner";
 
 import MainServices from "../components/MainServices";
-import MainServicePage from "../components/MainServicePage";
 
 function Home() {
   const galleryImages = [
@@ -48,7 +47,7 @@ function Home() {
       </div>
       <AboutUs />
       <MainServices />
-      <MainServicePage />
+
       <WhychooseUs />
       <ProductSlider />
       <WhyhnhProfile />

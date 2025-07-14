@@ -1,165 +1,178 @@
-import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Container } from "react-bootstrap";
+import { FaAngleDown } from "react-icons/fa";
+import headerlogo from "../assets/images/logo/hnh.jpg";
 import "../styles/Header.css";
 
-import headerlogo from "../assets/images/logo/hnh.jpg";
-import { FaAngleDown } from "react-icons/fa";
-
 const Header = () => {
-  const [showProducts, setShowProducts] = useState(false);
-  const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
+  const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+  const [showProductDropdown, setShowProductDropdown] = useState(false);
 
-  const handleNavClick = (path) => {
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 992);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleNavigate = (path) => {
     navigate(path);
-    setExpanded(false); // Collapse navbar after click
+    setExpanded(false);
+    setShowProductDropdown(false);
   };
 
   return (
-    <div className="header">
-      <Navbar bg="light" expand="lg" className="sticky-top" expanded={expanded}>
-        <Container>
-          <div className="mobile-header">
-            <NavLink to="/home" className="navbar-brand me-2">
-              <img src={headerlogo} alt="HNH SQUARE PROFILE" />
-            </NavLink>
-            <Navbar.Toggle
-              aria-controls="basic-navbar-nav"
-              onClick={() => setExpanded((prev) => !prev)}
-            />
-          </div>
-
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto" style={{ flexWrap: "wrap" }}>
+    <Navbar expanded={expanded} expand="lg" bg="light" className="sticky-top">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/home">
+          <img src={headerlogo} alt="HNH SQUARE PROFILE" height={50} />
+        </Navbar.Brand>
+        <Navbar.Toggle onClick={() => setExpanded((prev) => !prev)} />
+        <Navbar.Collapse>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
               <NavLink
-                to="/home"
                 className="nav-link"
+                to="/home"
                 onClick={() => setExpanded(false)}
               >
                 Home
               </NavLink>
+            </li>
+
+            <li className="nav-item">
               <NavLink
-                to="/about"
                 className="nav-link"
+                to="/about"
                 onClick={() => setExpanded(false)}
               >
                 About Us
               </NavLink>
+            </li>
 
-              <NavDropdown
-                id="basic-nav-dropdown"
-                show={showProducts}
-                onMouseEnter={() => setShowProducts(true)}
-                onMouseLeave={() => setShowProducts(false)}
-                title={
-                  <>
-                    Products{" "}
-                    <FaAngleDown
-                      className={`dropdown-icon ${
-                        showProducts ? "rotate" : ""
-                      }`}
-                    />
-                  </>
+            {/* Products Dropdown */}
+            <li
+              className={`nav-item dropdown custom-dropdown ${
+                showProductDropdown ? "show" : ""
+              }`}
+              onMouseEnter={() => !isMobile && setShowProductDropdown(true)}
+              onMouseLeave={() => !isMobile && setShowProductDropdown(false)}
+            >
+              <span
+                className="nav-link dropdown-toggle"
+                onClick={() =>
+                  isMobile && setShowProductDropdown((prev) => !prev)
                 }
               >
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/slider-door")}
-                >
-                  Slider Doors
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/slider-door")}
-                >
-                  Bathroom Partitions
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => handleNavClick("/open-door")}>
-                  Open Door
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/open-shutters")}
-                >
-                  LED Mirrors
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => handleNavClick("/led-mirror")}>
-                  Office Partitions
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/profile-partition")}
-                >
-                  Open Shutters
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/printed-led-wall-frame")}
-                >
-                  Pooja Doors
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/printed-led-wall-frame")}
-                >
-                  Profile Showcase
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/printed-led-wall-frame")}
-                >
-                  Sliding Door For Room Entrance
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/printed-led-wall-frame")}
-                >
-                  Walk-In Closet
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => handleNavClick("/printed-led-wall-frame")}
-                >
-                  Wardrobe Sliding Doors
-                </NavDropdown.Item>
-              </NavDropdown>
+                Products <FaAngleDown />
+              </span>
 
+              <ul
+                className={`dropdown-menu ${showProductDropdown ? "show" : ""}`}
+              >
+                <li className="dropdown-submenu">
+                  <span className="dropdown-item">Interior Design</span>
+                  <ul className="dropdown-menu">
+                    <li className="dropdown-submenu">
+                      <span className="dropdown-item">Residential</span>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/pooja-unit")}
+                          >
+                            Pooja Unit
+                          </span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="dropdown-submenu">
+                      <span className="dropdown-item">Commercial</span>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/workstations")}
+                          >
+                            Workstations
+                          </span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className="dropdown-submenu">
+                  <span className="dropdown-item">Profile Shutters</span>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/slider-door")}
+                      >
+                        Slider Door
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/partition")}
+                      >
+                        Partition
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li className="nav-item">
               <NavLink
-                to="/gallery"
                 className="nav-link"
+                to="/gallery"
                 onClick={() => setExpanded(false)}
               >
                 Gallery
               </NavLink>
+            </li>
+
+            <li className="nav-item">
               <NavLink
-                to="/clients"
                 className="nav-link"
-                onClick={() => setExpanded(false)}
-              >
-                Clients
-              </NavLink>
-              <NavLink
                 to="/careers"
-                className="nav-link"
                 onClick={() => setExpanded(false)}
               >
                 Careers
               </NavLink>
+            </li>
+
+            <li className="nav-item">
               <NavLink
-                to="/blogs"
                 className="nav-link"
+                to="/blogs"
                 onClick={() => setExpanded(false)}
               >
-                Blogs
+                Blog
               </NavLink>
+            </li>
+
+            <li className="nav-item">
               <NavLink
-                to="/contactus"
                 className="nav-link"
+                to="/contactus"
                 onClick={() => setExpanded(false)}
               >
                 Contact Us
               </NavLink>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+            </li>
+          </ul>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

@@ -25,7 +25,8 @@ import Blogs from "./Pages/Blogs";
 
 import BlogDetails from "./Pages/BlogDetails";
 import MainServices from "./components/MainServices";
-import MainServicePage from "./components/MainServicePage";
+import InteriorDesign from "./Pages/InteriorDesign";
+import ProfileSection from "./Pages/ProfileSection";
 
 function App() {
   useAOS();
@@ -55,7 +56,8 @@ function App() {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/" element={<MainServices />} />
-        <Route path="/service/:id" element={<MainServicePage />} />
+        <Route path="/service/interior-design" element={<InteriorDesign />} />
+        <Route path="/service/profile-section" element={<ProfileSection />} />
       </Routes>
       <Footer />
       <ScrollButton />
