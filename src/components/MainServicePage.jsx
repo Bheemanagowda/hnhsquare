@@ -24,11 +24,13 @@ const MainServicePage = ({ image, title, description, services, heading }) => {
               ) : (
                 <p>{description}</p>
               )}
-              <Button
-                text="Click More Products"
-                className="read-more"
-                icon={ArrowRightAltIcon}
-              />
+              <a href="/slider-door" style={{ textDecoration: "none" }}>
+                <Button
+                  text="Click More Products"
+                  className="read-more"
+                  icon={ArrowRightAltIcon}
+                />
+              </a>
             </div>
           </div>
         </div>

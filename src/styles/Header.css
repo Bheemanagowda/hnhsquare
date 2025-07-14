@@ -6,7 +6,7 @@
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -19,7 +19,7 @@
 
 .nav-link:hover,
 .dropdown-item:hover {
-  color: #007bff !important;
+  color: #b21001 !important;
   background-color: #f8f9fa;
 }
 
@@ -51,6 +51,7 @@
   margin-top: -1px;
   display: none;
   position: absolute;
+  color: #000;
 }
 
 /* Show submenu on hover (desktop only) */
@@ -235,14 +236,49 @@
   line-height: 2.2; /* Adjust for spacing (1.5–2.5 is ideal) */
   padding-top: 6px;
   padding-bottom: 6px;
+  font-size: 18px;
 }
 
 /* Apply line-height to nested submenus too */
 .dropdown-submenu .dropdown-menu .dropdown-item {
-  line-height: 2.2;
+  line-height: 1.5;
 }
 
 .dropdown-item {
   padding: 10px 16px;
   line-height: 2;
+}
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.nav-link .fa-angle-down {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  line-height: 2;
+  padding-left: 10px;
+}
+
+.dropdown-submenu .dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #b21001 !important; /* or any highlight color */
+}
+
+.custom-dropdown .dropdown-menu .dropdown-item.active {
+  background-color: #f0f0f0;
+  font-weight: 600;
 }

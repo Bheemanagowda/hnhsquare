@@ -15,12 +15,7 @@ import lightbulb from "../assets/images/interior-design/crockery-unit.png";
 import wallpaper from "../assets/images/interior-design/crockery-unit.png";
 import format_paint from "../assets/images/interior-design/crockery-unit.png";
 import bathtub from "../assets/images/interior-design/crockery-unit.png";
-import plumbing from "../assets/images/interior-design/crockery-unit.png";
-import self_improvement from "../assets/images/interior-design/crockery-unit.png";
-import home from "../assets/images/interior-design/crockery-unit.png";
-import chair from "../assets/images/interior-design/crockery-unit.png";
-import child_care from "../assets/images/interior-design/crockery-unit.png";
-import workstation from "../assets/images/interior-design/crockery-unit.png";
+
 import Breadcrumb from "../components/Breadcrumb";
 
 // ✅ Missing images

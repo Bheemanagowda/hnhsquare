@@ -8,12 +8,22 @@ import "../styles/Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
-  const [productOpen, setProductOpen] = useState(false);
+  const [openMenus, setOpenMenus] = useState({
+    products: false,
+    interior: false,
+    residential: false,
+    commercial: false,
+    shutters: false,
+  });
 
   const handleNavigate = (path) => {
     navigate(path);
     setExpanded(false);
-    setProductOpen(false);
+    setOpenMenus({});
+  };
+
+  const toggleMenu = (key, isOpen) => {
+    setOpenMenus((prev) => ({ ...prev, [key]: isOpen }));
   };
 
   return (
@@ -34,7 +44,6 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -47,30 +56,154 @@ const Header = () => {
 
             {/* Products Dropdown */}
             <li
-              className={`nav-item dropdown custom-dropdown ${
-                productOpen ? "show" : ""
-              }`}
-              onMouseEnter={() => setProductOpen(true)}
-              onMouseLeave={() => setProductOpen(false)}
+              className="nav-item dropdown custom-dropdown"
+              onMouseEnter={() => toggleMenu("products", true)}
+              onMouseLeave={() => toggleMenu("products", false)}
             >
-              <span
-                className="nav-link dropdown-toggle d-flex justify-content-between align-items-center"
-                onClick={() => setProductOpen(!productOpen)}
-              >
-                Products <FaAngleDown />
+              <span className="nav-link dropdown-toggle">
+                Products{" "}
+                <FaAngleDown
+                  className={openMenus.products ? "rotate-icon" : ""}
+                />
               </span>
-
-              <ul className={`dropdown-menu ${productOpen ? "show" : ""}`}>
-                <li className="dropdown-submenu">
-                  <span className="dropdown-item d-flex justify-content-between align-items-center">
-                    Interior Design <FaAngleDown />
+              <ul
+                className={`dropdown-menu ${openMenus.products ? "show" : ""}`}
+              >
+                {/* Interior Design */}
+                <li
+                  className="dropdown-submenu"
+                  onMouseEnter={() => toggleMenu("interior", true)}
+                  onMouseLeave={() => toggleMenu("interior", false)}
+                >
+                  <span className="dropdown-item">
+                    Interior Design{" "}
+                    <FaAngleDown
+                      className={openMenus.interior ? "rotate-icon" : ""}
+                    />
                   </span>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-submenu">
-                      <span className="dropdown-item d-flex justify-content-between align-items-center">
-                        Residential <FaAngleDown />
+                  <ul
+                    className={`dropdown-menu ${
+                      openMenus.interior ? "show" : ""
+                    }`}
+                  >
+                    {/* Residential */}
+                    <li
+                      className="dropdown-submenu"
+                      onMouseEnter={() => toggleMenu("residential", true)}
+                      onMouseLeave={() => toggleMenu("residential", false)}
+                    >
+                      <span className="dropdown-item">
+                        Residential Interior Design
+                        <FaAngleDown
+                          className={openMenus.residential ? "rotate-icon" : ""}
+                        />
                       </span>
-                      <ul className="dropdown-menu">
+                      <ul
+                        className={`dropdown-menu ${
+                          openMenus.residential ? "show" : ""
+                        }`}
+                      >
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/slider-door")}
+                          >
+                            Modular Kitchen
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() =>
+                              handleNavigate("/storage-and-wardrobe")
+                            }
+                          >
+                            Storage and Wardrobe
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/crockery-units")}
+                          >
+                            Crockery Units
+                          </span>
+                        </li>
+
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() =>
+                              handleNavigate("/space-saving-furniture")
+                            }
+                          >
+                            Space Saving Furniture
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/tv-units")}
+                          >
+                            TV Units
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/study-tables")}
+                          >
+                            Study Tables
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/false-ceiling")}
+                          >
+                            False Ceiling
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/lights")}
+                          >
+                            Lights
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/wallpaper")}
+                          >
+                            Wallpaper
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/wall-paint")}
+                          >
+                            Wall Paint
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/bathroom")}
+                          >
+                            Bathroom
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/utility-area")}
+                          >
+                            Utility Area
+                          </span>
+                        </li>
                         <li>
                           <span
                             className="dropdown-item"
@@ -79,13 +212,74 @@ const Header = () => {
                             Pooja Unit
                           </span>
                         </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/foyer-designs")}
+                          >
+                            Foyer Designs
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/movable-furniture")}
+                          >
+                            Movable Furniture
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/kids-bedroom")}
+                          >
+                            Kids Bedroom
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/guest-bedroom")}
+                          >
+                            Guest Bedroom
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/master-bedroom")}
+                          >
+                            Master Bedroom
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            className="dropdown-item"
+                            onClick={() => handleNavigate("/balcony-designs")}
+                          >
+                            Balcony Design
+                          </span>
+                        </li>
                       </ul>
                     </li>
-                    <li className="dropdown-submenu">
-                      <span className="dropdown-item d-flex justify-content-between align-items-center">
-                        Commercial <FaAngleDown />
+
+                    {/* Commercial */}
+                    <li
+                      className="dropdown-submenu"
+                      onMouseEnter={() => toggleMenu("commercial", true)}
+                      onMouseLeave={() => toggleMenu("commercial", false)}
+                    >
+                      <span className="dropdown-item">
+                        Commercial Interior Design
+                        <FaAngleDown
+                          className={openMenus.commercial ? "rotate-icon" : ""}
+                        />
                       </span>
-                      <ul className="dropdown-menu">
+                      <ul
+                        className={`dropdown-menu ${
+                          openMenus.commercial ? "show" : ""
+                        }`}
+                      >
                         <li>
                           <span
                             className="dropdown-item"
@@ -99,11 +293,23 @@ const Header = () => {
                   </ul>
                 </li>
 
-                <li className="dropdown-submenu">
-                  <span className="dropdown-item d-flex justify-content-between align-items-center">
-                    Profile Shutters <FaAngleDown />
+                {/* Profile Shutters */}
+                <li
+                  className="dropdown-submenu"
+                  onMouseEnter={() => toggleMenu("shutters", true)}
+                  onMouseLeave={() => toggleMenu("shutters", false)}
+                >
+                  <span className="dropdown-item">
+                    Profile Shutters{" "}
+                    <FaAngleDown
+                      className={openMenus.shutters ? "rotate-icon" : ""}
+                    />
                   </span>
-                  <ul className="dropdown-menu">
+                  <ul
+                    className={`dropdown-menu ${
+                      openMenus.shutters ? "show" : ""
+                    }`}
+                  >
                     <li>
                       <span
                         className="dropdown-item"
@@ -115,9 +321,83 @@ const Header = () => {
                     <li>
                       <span
                         className="dropdown-item"
+                        onClick={() => handleNavigate("/bathroom-partition")}
+                      >
+                        Bathroom Partitions
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/open-doors")}
+                      >
+                        Open Door
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/led-mirrors")}
+                      >
+                        LED Mirrors
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/office-partitions")}
+                      >
+                        Office Partitions
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("open-shutters")}
+                      >
+                        Open Shutters
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/pooja-doors")}
+                      >
+                        Pooja Doors
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/profile-showcase")}
+                      >
+                        Profile Showcase
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() =>
+                          handleNavigate("/sliding-door-for-room-entrance")
+                        }
+                      >
+                        Sliding Door For Room Entrance
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
                         onClick={() => handleNavigate("/partition")}
                       >
-                        Partition
+                        Wall Paint
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        className="dropdown-item"
+                        onClick={() => handleNavigate("/walkin-closet")}
+                      >
+                        Walkin Closet
                       </span>
                     </li>
                   </ul>
@@ -125,7 +405,6 @@ const Header = () => {
               </ul>
             </li>
 
-            {/* Gallery */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -135,8 +414,6 @@ const Header = () => {
                 Gallery
               </NavLink>
             </li>
-
-            {/* Careers */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -146,8 +423,6 @@ const Header = () => {
                 Careers
               </NavLink>
             </li>
-
-            {/* Blog */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -157,8 +432,6 @@ const Header = () => {
                 Blog
               </NavLink>
             </li>
-
-            {/* Contact Us */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
