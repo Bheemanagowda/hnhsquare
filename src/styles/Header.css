@@ -196,3 +196,53 @@
   left: 100%;
   margin-left: 0.1rem;
 }
+
+/* Show/hide dropdowns */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .dropdown:hover > .dropdown-menu,
+.navbar-nav .dropdown.show > .dropdown-menu {
+  display: block;
+}
+
+/* Submenu styles */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
+
+/* Icons spacing */
+.dropdown-item svg {
+  margin-left: 6px;
+}
+
+/* Apply line-height and spacing to dropdown items */
+.dropdown-menu .dropdown-item {
+  line-height: 2.2; /* Adjust for spacing (1.5–2.5 is ideal) */
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* Apply line-height to nested submenus too */
+.dropdown-submenu .dropdown-menu .dropdown-item {
+  line-height: 2.2;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  line-height: 2;
+}

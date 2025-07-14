@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
 import { FaAngleDown } from "react-icons/fa";
@@ -8,21 +8,12 @@ import "../styles/Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
-  const [showProductDropdown, setShowProductDropdown] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 992);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [productOpen, setProductOpen] = useState(false);
 
   const handleNavigate = (path) => {
     navigate(path);
     setExpanded(false);
-    setShowProductDropdown(false);
+    setProductOpen(false);
   };
 
   return (
@@ -57,28 +48,28 @@ const Header = () => {
             {/* Products Dropdown */}
             <li
               className={`nav-item dropdown custom-dropdown ${
-                showProductDropdown ? "show" : ""
+                productOpen ? "show" : ""
               }`}
-              onMouseEnter={() => !isMobile && setShowProductDropdown(true)}
-              onMouseLeave={() => !isMobile && setShowProductDropdown(false)}
+              onMouseEnter={() => setProductOpen(true)}
+              onMouseLeave={() => setProductOpen(false)}
             >
               <span
-                className="nav-link dropdown-toggle"
-                onClick={() =>
-                  isMobile && setShowProductDropdown((prev) => !prev)
-                }
+                className="nav-link dropdown-toggle d-flex justify-content-between align-items-center"
+                onClick={() => setProductOpen(!productOpen)}
               >
                 Products <FaAngleDown />
               </span>
 
-              <ul
-                className={`dropdown-menu ${showProductDropdown ? "show" : ""}`}
-              >
+              <ul className={`dropdown-menu ${productOpen ? "show" : ""}`}>
                 <li className="dropdown-submenu">
-                  <span className="dropdown-item">Interior Design</span>
+                  <span className="dropdown-item d-flex justify-content-between align-items-center">
+                    Interior Design <FaAngleDown />
+                  </span>
                   <ul className="dropdown-menu">
                     <li className="dropdown-submenu">
-                      <span className="dropdown-item">Residential</span>
+                      <span className="dropdown-item d-flex justify-content-between align-items-center">
+                        Residential <FaAngleDown />
+                      </span>
                       <ul className="dropdown-menu">
                         <li>
                           <span
@@ -91,7 +82,9 @@ const Header = () => {
                       </ul>
                     </li>
                     <li className="dropdown-submenu">
-                      <span className="dropdown-item">Commercial</span>
+                      <span className="dropdown-item d-flex justify-content-between align-items-center">
+                        Commercial <FaAngleDown />
+                      </span>
                       <ul className="dropdown-menu">
                         <li>
                           <span
@@ -107,7 +100,9 @@ const Header = () => {
                 </li>
 
                 <li className="dropdown-submenu">
-                  <span className="dropdown-item">Profile Shutters</span>
+                  <span className="dropdown-item d-flex justify-content-between align-items-center">
+                    Profile Shutters <FaAngleDown />
+                  </span>
                   <ul className="dropdown-menu">
                     <li>
                       <span
@@ -130,16 +125,18 @@ const Header = () => {
               </ul>
             </li>
 
+            {/* Gallery */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
-                to="/gallery"
+                to="/Gallery"
                 onClick={() => setExpanded(false)}
               >
                 Gallery
               </NavLink>
             </li>
 
+            {/* Careers */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -150,6 +147,7 @@ const Header = () => {
               </NavLink>
             </li>
 
+            {/* Blog */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
@@ -160,6 +158,7 @@ const Header = () => {
               </NavLink>
             </li>
 
+            {/* Contact Us */}
             <li className="nav-item">
               <NavLink
                 className="nav-link"
