@@ -66,21 +66,21 @@ const products = [
   },
   {
     title: "Profile Showcases",
-    slug: "profile-showcases",
+    slug: "profile-showcase",
     content:
       "Elegant profile showcases made with aluminum or uPVC frames, ideal for stylish displays in homes or commercial.",
     image: product7,
   },
   {
     title: "Sliding Doors",
-    slug: "sliding-doors",
+    slug: "sliding-door",
     content:
       "Stylish, space-saving sliding doors for modern homes and offices, enhancing light, flow, and accessibility.",
     image: product8,
   },
   {
     title: "Walk-in Closet",
-    slug: "walk-in-closet",
+    slug: "walkin-closet",
     content:
       "Spacious, organized, and stylish walk-in closets designed to maximize storage while enhancing the aesthetics of your room.",
     image: product9,
