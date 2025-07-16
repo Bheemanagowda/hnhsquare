@@ -77,7 +77,7 @@ const ProductsDeatil = () => {
 
             <div className="d-flex justify-content-end mt-4">
               <Button
-                text="Enquiry Now"
+                text="Enquire Now"
                 className="read-more"
                 onClick={handleOpen}
               />
