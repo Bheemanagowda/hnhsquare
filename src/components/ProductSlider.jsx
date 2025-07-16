@@ -1,6 +1,7 @@
 // src/components/ProductSlider.jsx
 import React from "react";
 import Slider from "./Slider";
+import { Link } from "react-router-dom";
 import product1 from "../assets/images/our-products/bathroom-partition.jpg";
 import product2 from "../assets/images/our-products/led-mirror.jpg";
 import product3 from "../assets/images/our-products/office-partition.jpg";
@@ -23,60 +24,70 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 const products = [
   {
     title: "Bathroom Partitions",
+    slug: "bathroom-partitions",
     content:
       "Durable, low-maintenance partitions in stainless steel, HPL, and powder-coated metal—ideal for commercial restrooms.",
     image: product1,
   },
   {
-    title: "LED Mirrors ",
+    title: "LED Mirrors",
+    slug: "led-mirrors",
     content:
       "Sleek, energy-efficient mirrors with built-in lighting—perfect for modern bathrooms and dressing areas.",
     image: product2,
   },
   {
     title: "Office Partitions",
+    slug: "office-partitions",
     content:
       "We provide versatile and modern office partitions that create organized, functional workspaces.",
     image: product3,
   },
   {
     title: "Open Shutters",
+    slug: "open-shutters",
     content:
       "Sleek and durable open shutters designed for easy access, ventilation, and modern aesthetics.",
     image: product4,
   },
   {
     title: "Pooja Doors",
+    slug: "pooja-doors",
     content:
       "Elegant and traditional pooja doors crafted to enhance the spiritual ambiance of your prayer space.",
     image: product5,
   },
   {
     title: "Profile Doors",
+    slug: "profile-doors",
     content:
       "Sleek, modern profile doors with aluminum or uPVC frames, offering durability, style, and low maintenance for contemporary interiors.",
     image: product6,
   },
   {
     title: "Profile Showcases",
+    slug: "profile-showcases",
     content:
-      "Elegant profile showcases made with aluminum or uPVC frames, ideal for stylish displays in homes or commecial .",
+      "Elegant profile showcases made with aluminum or uPVC frames, ideal for stylish displays in homes or commercial.",
     image: product7,
   },
   {
     title: "Sliding Doors",
+    slug: "sliding-doors",
     content:
       "Stylish, space-saving sliding doors for modern homes and offices, enhancing light, flow, and accessibility.",
     image: product8,
   },
   {
     title: "Walk-in Closet",
+    slug: "walk-in-closet",
     content:
       "Spacious, organized, and stylish walk-in closets designed to maximize storage while enhancing the aesthetics of your room.",
     image: product9,
   },
   {
     title: "Wardrobe Sliding Door",
+    slug: "wardrobe-sliding-door",
     content:
       "Sleek and space-saving sliding wardrobe doors for a modern, organized, stylish, and clutter-free look.",
     image: product10,
@@ -112,17 +123,26 @@ const ProductSlider = () => {
                     className="product-image"
                   />
                 </motion.div>
-                <h5 className="product-title">{product.title}</h5>
+                <h5 className="product-title">
+                  <Link
+                    to={`/${product.slug}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {product.title}
+                  </Link>
+                </h5>
                 <p>{product.content}</p>
                 <div className="justify-content-center">
-                  <a href="/slider-door" style={{ textDecoration: "none" }}>
-                    {" "}
+                  <Link
+                    to={`/${product.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
                     <Button
                       text="Read More"
                       className="read-more btn-center"
                       icon={ArrowRightAltIcon}
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}

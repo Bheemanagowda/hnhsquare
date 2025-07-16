@@ -6,6 +6,8 @@ const Breadcrumb = ({
   backgroundImage,
   showPageTitle = true,
   blogTitle,
+  category,
+  productName,
 }) => {
   const breadcrumbStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -26,9 +28,24 @@ const Breadcrumb = ({
           <li className="breadcrumb-item">
             <a href="/">Home</a>
           </li>
-          <li className="breadcrumb-item active" aria-current="page">
-            {pageTitle}
+          <li className="breadcrumb-item">
+            <a href="/products">Products</a>
           </li>
+          {category && (
+            <li className="breadcrumb-item">
+              <span>{category}</span>
+            </li>
+          )}
+          {productName && (
+            <li className="breadcrumb-item active" aria-current="page">
+              {productName}
+            </li>
+          )}
+          {!productName && !category && (
+            <li className="breadcrumb-item active" aria-current="page">
+              {pageTitle}
+            </li>
+          )}
         </ol>
       </nav>
     </div>

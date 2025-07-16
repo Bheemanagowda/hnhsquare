@@ -2,6 +2,7 @@ import React from "react";
 import UnderlineOnly from "./UnderlineOnly";
 import Button from "./Button";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { Link } from "react-router-dom";
 
 const MainServicePage = ({ image, title, description, services, heading }) => {
   return (
@@ -24,13 +25,13 @@ const MainServicePage = ({ image, title, description, services, heading }) => {
               ) : (
                 <p>{description}</p>
               )}
-              <a href="/slider-door" style={{ textDecoration: "none" }}>
+              <Link to="/sliding-door" style={{ textDecoration: "none" }}>
                 <Button
                   text="Click More Products"
                   className="read-more"
                   icon={ArrowRightAltIcon}
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

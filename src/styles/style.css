@@ -4,6 +4,7 @@
 
 :root {
   --primary-color: #262626; /* You can use any color you like */
+  --bs-primary-rgb: 255, 0, 0 !important; /* Red in RGB */
 }
 
 body {

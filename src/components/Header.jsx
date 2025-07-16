@@ -106,11 +106,12 @@ const Header = () => {
                         <li>
                           <span
                             className="dropdown-item"
-                            onClick={() => handleNavigate("/slider-door")}
+                            onClick={() => handleNavigate("/modular-kitchen")}
                           >
                             Modular Kitchen
                           </span>
                         </li>
+
                         <li>
                           <span
                             className="dropdown-item"
@@ -143,7 +144,7 @@ const Header = () => {
                         <li>
                           <span
                             className="dropdown-item"
-                            onClick={() => handleNavigate("/tv-units")}
+                            onClick={() => handleNavigate("tv-units")}
                           >
                             TV Units
                           </span>
@@ -255,7 +256,7 @@ const Header = () => {
                         <li>
                           <span
                             className="dropdown-item"
-                            onClick={() => handleNavigate("/balcony-designs")}
+                            onClick={() => handleNavigate("/balcony-design")}
                           >
                             Balcony Design
                           </span>
@@ -300,7 +301,7 @@ const Header = () => {
                   onMouseLeave={() => toggleMenu("shutters", false)}
                 >
                   <span className="dropdown-item">
-                    Profile Shutters{" "}
+                    Profile Sections{" "}
                     <FaAngleDown
                       className={openMenus.shutters ? "rotate-icon" : ""}
                     />
@@ -313,15 +314,15 @@ const Header = () => {
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => handleNavigate("/slider-door")}
+                        onClick={() => handleNavigate("sliding-door")}
                       >
-                        Slider Door
+                        Sliding Door
                       </span>
                     </li>
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => handleNavigate("/bathroom-partition")}
+                        onClick={() => handleNavigate("/bathroom-partitions")}
                       >
                         Bathroom Partitions
                       </span>
@@ -329,7 +330,7 @@ const Header = () => {
                     <li>
                       <span
                         className="dropdown-item"
-                        onClick={() => handleNavigate("/open-doors")}
+                        onClick={() => handleNavigate("/open-door")}
                       >
                         Open Door
                       </span>
@@ -358,14 +359,7 @@ const Header = () => {
                         Open Shutters
                       </span>
                     </li>
-                    <li>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => handleNavigate("/pooja-doors")}
-                      >
-                        Pooja Doors
-                      </span>
-                    </li>
+
                     <li>
                       <span
                         className="dropdown-item"
@@ -378,20 +372,13 @@ const Header = () => {
                       <span
                         className="dropdown-item"
                         onClick={() =>
-                          handleNavigate("/sliding-door-for-room-entrance")
+                          handleNavigate("/sliding-door-room-entrance")
                         }
                       >
                         Sliding Door For Room Entrance
                       </span>
                     </li>
-                    <li>
-                      <span
-                        className="dropdown-item"
-                        onClick={() => handleNavigate("/partition")}
-                      >
-                        Wall Paint
-                      </span>
-                    </li>
+
                     <li>
                       <span
                         className="dropdown-item"

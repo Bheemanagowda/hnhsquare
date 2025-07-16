@@ -1,7 +1,15 @@
+:root {
+  --bs-primary-rgb: 255, 0, 0; /* Red in RGB */
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: #000; /* optional */
+
   font-family: "Montserrat", sans-serif !important;
+}
+.text-primary {
+  --bs-text-opacity: 1;
+  color: #b21001 !important;
 }

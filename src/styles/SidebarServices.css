@@ -6,7 +6,7 @@
 }
 
 .active-service {
-  background-color: #b21001; /* Highlighted orange */
+  /* Highlighted orange */
   font-weight: bold;
 }
 .product-name {
@@ -26,5 +26,40 @@
 }
 .active-service .fw-semibold,
 .active-service small {
-  color: #fff !important;
+  color: #b21001 !important;
+}
+.category-header {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-header:hover {
+  background-color: #e0e0e0;
+}
+
+.category-header {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-header:hover {
+  background-color: #e0e0e0;
+}
+.recent-post-titel {
+  font-size: 18px;
+  color: #000;
+}
+.hover-bg:hover {
+  background-color: #b71b0c;
+  color: white;
+}
+
+.hover-bg:hover .recent-post-titel {
+  color: white;
 }
