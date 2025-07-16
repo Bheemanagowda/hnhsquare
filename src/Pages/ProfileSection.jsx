@@ -4,17 +4,17 @@ import ProfileSectionImg from "../assets/images/profile-section/profile-section.
 import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
 
 // Images
-import kitchen from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import wardrobe from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import weekend from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import dining from "../assets/images/interior-design/crockery-unit.png";
-import tv from "../assets/images/interior-design/crockery-unit.png";
-import desk from "../assets/images/interior-design/crockery-unit.png";
-import account_tree from "../assets/images/interior-design/crockery-unit.png";
-import lightbulb from "../assets/images/interior-design/crockery-unit.png";
-import wallpaper from "../assets/images/interior-design/crockery-unit.png";
-import format_paint from "../assets/images/interior-design/crockery-unit.png";
-import bathtub from "../assets/images/interior-design/crockery-unit.png";
+import p1 from "../assets/images/our-main-service/profile-section/1.png";
+import p2 from "../assets/images/our-main-service/profile-section/2.png";
+import p3 from "../assets/images/our-main-service/profile-section/3.png";
+import p4 from "../assets/images/our-main-service/profile-section/4.png";
+import p5 from "../assets/images/our-main-service/profile-section/5.png";
+import p6 from "../assets/images/our-main-service/profile-section/6.png";
+import p7 from "../assets/images/our-main-service/profile-section/7.png";
+import p8 from "../assets/images/our-main-service/profile-section/8.png";
+import p9 from "../assets/images/our-main-service/profile-section/9.png";
+import p10 from "../assets/images/our-main-service/profile-section/10.png";
+import p11 from "../assets/images/our-main-service/profile-section/11.png";
 
 import Breadcrumb from "../components/Breadcrumb";
 
@@ -22,17 +22,17 @@ import Breadcrumb from "../components/Breadcrumb";
 
 // Services data
 const services = [
-  { id: 1, name: "Slider Door ", image: kitchen },
-  { id: 2, name: "Bathroom Partitions", image: wardrobe },
-  { id: 3, name: "Open Door ", image: dining },
-  { id: 4, name: "LED Mirrors", image: weekend },
-  { id: 5, name: "Office Partitions ", image: tv },
-  { id: 6, name: "Open Shutters", image: desk },
-  { id: 7, name: "Pooja Doors", image: account_tree },
-  { id: 8, name: "Profile Showcase", image: lightbulb },
-  { id: 9, name: "Sliding Door For Room Entrance", image: wallpaper },
-  { id: 10, name: "Wall Paint", image: format_paint },
-  { id: 11, name: "Walkin Closet", image: bathtub },
+  { id: 1, name: "Slider Door ", image: p1 },
+  { id: 2, name: "Bathroom Partitions", image: p2 },
+  { id: 3, name: "Open Door ", image: p3 },
+  { id: 4, name: "LED Mirrors", image: p4 },
+  { id: 5, name: "Office Partitions ", image: p5 },
+  { id: 6, name: "Open Shutters", image: p6 },
+  { id: 7, name: "Pooja Doors", image: p7 },
+  { id: 8, name: "Profile Showcase", image: p8 },
+  { id: 9, name: "Sliding Door For Room Entrance", image: p9 },
+  { id: 10, name: "Wall Paint", image: p10 },
+  { id: 11, name: "Walkin Closet", image: p11 },
 ];
 
 const description = [

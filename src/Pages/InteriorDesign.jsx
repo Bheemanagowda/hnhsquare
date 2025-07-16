@@ -4,49 +4,52 @@ import interiorImg from "../assets/images/interior-design/abt.jpg";
 import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
 
 // Images
-import kitchen from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import wardrobe from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import weekend from "../assets/images/interior-design/modular-kitchen-interior-design-services.png";
-import dining from "../assets/images/interior-design/crockery-unit.png";
-import tv from "../assets/images/interior-design/crockery-unit.png";
-import desk from "../assets/images/interior-design/crockery-unit.png";
-import account_tree from "../assets/images/interior-design/crockery-unit.png";
-import lightbulb from "../assets/images/interior-design/crockery-unit.png";
-import wallpaper from "../assets/images/interior-design/crockery-unit.png";
-import format_paint from "../assets/images/interior-design/crockery-unit.png";
-import bathtub from "../assets/images/interior-design/crockery-unit.png";
-import plumbing from "../assets/images/interior-design/crockery-unit.png";
-import self_improvement from "../assets/images/interior-design/crockery-unit.png";
-import home from "../assets/images/interior-design/crockery-unit.png";
-import chair from "../assets/images/interior-design/crockery-unit.png";
-import child_care from "../assets/images/interior-design/crockery-unit.png";
-import workstation from "../assets/images/interior-design/crockery-unit.png";
+import i1 from "../assets/images/our-main-service/interior-design/1.png";
+import i2 from "../assets/images/our-main-service/interior-design/2.png";
+import i3 from "../assets/images/our-main-service/interior-design/3.png";
+import i4 from "../assets/images/our-main-service/interior-design/4.png";
+import i5 from "../assets/images/our-main-service/interior-design/5.png";
+import i6 from "../assets/images/our-main-service/interior-design/6.png";
+import i7 from "../assets/images/our-main-service/interior-design/7.png";
+import i8 from "../assets/images/our-main-service/interior-design/8.png";
+import i9 from "../assets/images/our-main-service/interior-design/9.png";
+import i10 from "../assets/images/our-main-service/interior-design/10.png";
+import i11 from "../assets/images/our-main-service/interior-design/11.png";
+import i12 from "../assets/images/our-main-service/interior-design/12.png";
+import i13 from "../assets/images/our-main-service/interior-design/13.png";
+import i14 from "../assets/images/our-main-service/interior-design/14.png";
+import i15 from "../assets/images/our-main-service/interior-design/15.png";
+import i16 from "../assets/images/our-main-service/interior-design/16.png";
+import i17 from "../assets/images/our-main-service/interior-design/17.png";
+import i18 from "../assets/images/our-main-service/interior-design/18.png";
+import i19 from "../assets/images/our-main-service/interior-design/19.png";
+import i20 from "../assets/images/our-main-service/interior-design/20.png";
 import Breadcrumb from "../components/Breadcrumb";
 
 // ✅ Missing images
 
 // Services data
 const services = [
-  { id: 1, name: "Modular Kitchen", image: kitchen },
-  { id: 2, name: "Storage and Wardrobe", image: wardrobe },
-  { id: 3, name: "Crockery Units", image: dining },
-  { id: 4, name: "Space Saving Furniture", image: weekend },
-  { id: 5, name: "TV Units", image: tv },
-  { id: 6, name: "Study Tables", image: desk },
-  { id: 7, name: "False Ceiling", image: account_tree },
-  { id: 8, name: "Lights", image: lightbulb },
-  { id: 9, name: "Wallpaper", image: wallpaper },
-  { id: 10, name: "Wall Paint", image: format_paint },
-  { id: 11, name: "Bathroom", image: bathtub },
-  { id: 12, name: "Utility Area", image: plumbing },
-  { id: 13, name: "Pooja Unit", image: self_improvement },
-  { id: 14, name: "Foyer Designs", image: home },
-  { id: 15, name: "Movable Furniture", image: chair },
-  { id: 16, name: "Kids Bedroom", image: child_care },
-  { id: 17, name: "Guest Bedroom", image: dining },
-  { id: 18, name: "Master Bedroom", image: tv },
-  { id: 19, name: "Balcony Design", image: lightbulb },
-  { id: 20, name: "Workstation", image: workstation },
+  { id: 1, name: "Modular Kitchen", image: i1 },
+  { id: 2, name: "Storage and Wardrobe", image: i2 },
+  { id: 3, name: "Crockery Units", image: i3 },
+  { id: 4, name: "Space Saving Furniture", image: i4 },
+  { id: 5, name: "TV Units", image: i5 },
+  { id: 6, name: "Study Tables", image: i6 },
+  { id: 7, name: "False Ceiling", image: i7 },
+  { id: 8, name: "Lights", image: i8 },
+  { id: 9, name: "Wallpaper", image: i9 },
+  { id: 10, name: "Wall Paint", image: i10 },
+  { id: 11, name: "Bathroom", image: i11 },
+  { id: 12, name: "Utility Area", image: i12 },
+  { id: 13, name: "Pooja Unit", image: i13 },
+  { id: 14, name: "Foyer Designs", image: i14 },
+  { id: 15, name: "Movable Furniture", image: i15 },
+  { id: 16, name: "Kids Bedroom", image: i16 },
+  { id: 17, name: "Guest Bedroom", image: i17 },
+  { id: 18, name: "Master Bedroom", image: i18 },
+  { id: 19, name: "Balcony Design", image: i19 },
+  { id: 19, name: "Workstation", image: i20 },
 ];
 
 const description = [

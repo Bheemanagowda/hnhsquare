@@ -1,22 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
-import walkinCloset from "../assets/images/inner-products/walkin-closet/1.jpg";
-import openShutters from "../assets/images/inner-products/open-shutters/2.jpg";
+import InteriorDesign from "../assets/images/our-main-service/interior.jpg";
+import ProfileSections from "../assets/images/our-main-service/profile.jpg";
 import UnderlineOnly from "./UnderlineOnly";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const services = [
   {
     id: "interior-design",
-    image: walkinCloset,
+    image: InteriorDesign,
     title: "Interior Design",
     description:
       "A stylish and spacious walk-in closet with optimized storage solutions.",
   },
   {
     id: "profile-section",
-    image: openShutters,
+    image: ProfileSections,
     title: "Profile Section",
     description:
       "Sleek and modern profile shutters for a contemporary interior look.",

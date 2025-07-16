@@ -50,7 +50,6 @@ const ProductsDeatil = () => {
       <Breadcrumb
         pageTitle={product.title}
         backgroundImage={breadcrumbBg}
-        // category={activeCategory}
         productName={product.title}
       />
       <div className="container py-4">
