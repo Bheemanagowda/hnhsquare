@@ -7,10 +7,7 @@
   .mobile-banner {
     display: block;
   }
-  .breadcrumb-container {
-    padding: 80px;
-    color: white;
-  }
+
   h1 {
     font-size: 24px !important; /* For tablets and smaller devices */
   }
@@ -20,7 +17,7 @@
     color: #000;
   }
   .breadcrumb-container {
-    padding: 70px !important;
+    padding: 30px !important;
     color: #fff;
   }
 

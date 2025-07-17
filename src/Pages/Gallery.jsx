@@ -97,11 +97,11 @@ const Gallery = () => {
         className=""
       />
       <div className="container">
-        <div className="gallery-page  px-4 py-5">
-          <h2 className="text-center mb-4">
+        <div className="gallery-page  p-space">
+          <h2 className="text-center title mb-4">
             Our <span className="color-text">Gallery</span>
           </h2>
-          <UnderlineOnly className="" />
+          <UnderlineOnly className="mb-4" />
           {Object.entries(categorizedImages).map(([category, images]) => (
             <div key={category} className="mb-5">
               <h4 className="mb-4 category-title">{category}</h4>

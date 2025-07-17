@@ -8,7 +8,7 @@ const MainServicePage = ({ image, title, description, services, heading }) => {
   return (
     <div>
       {/* Top Section */}
-      <section className="p-5">
+      <section className="p-space">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">

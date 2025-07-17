@@ -1,4 +1,4 @@
-/* General header styles */
+/* === General Navbar Styling === */
 .header {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -23,259 +23,118 @@
   background-color: #f8f9fa;
 }
 
-/* Dropdown Arrow icon rotation */
+/* === Dropdown Icon === */
 .dropdown-icon {
   margin-left: 5px;
   transition: transform 0.3s ease-in-out;
 }
-
-.dropdown-icon.rotate {
+.rotate-icon {
   transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
-/* Base dropdown menu */
-.dropdown-menu {
-  border-radius: 0;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Nested dropdown positioning for desktop */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-  display: none;
-  position: absolute;
-  color: #000;
-}
-
-/* Show submenu on hover (desktop only) */
-@media (min-width: 992px) {
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
-/* For mobile: nested dropdowns are shown when clicked (JS handles toggle) */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background-color: #fff;
-    padding: 10px 0;
-  }
-
-  .dropdown-menu .dropdown-menu {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-left: 20px;
-    border-left: 2px solid #e0e0e0;
-    box-shadow: none;
-  }
-}
-/* Base dropdown hover support */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-  display: none;
-  position: absolute;
-}
-
-/* Show submenu on hover for desktop */
-@media (min-width: 992px) {
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
-/* For mobile – stack the dropdowns */
-@media (max-width: 991px) {
-  .dropdown-submenu .dropdown-menu {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin: 0;
-    display: block;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-
-/* Optional: arrow icon */
 .dropdown-toggle::after {
   display: none !important;
 }
 
-.custom-dropdown {
-  position: relative;
-}
-
-.custom-dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  background: #fff;
-  padding: 0;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.custom-dropdown:hover > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  display: none;
-  position: absolute;
-}
-
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-item {
-  padding: 10px 16px;
-  cursor: pointer;
-  background-color: white;
-  white-space: nowrap;
-}
-
-.dropdown-item:hover {
-  background-color: #f1f1f1;
-}
-/* Default hide dropdown */
-.navbar-nav .dropdown-menu {
+/* === Base Dropdown Menu === */
+.dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: #fff;
   z-index: 1000;
-  padding: 0;
   border: 1px solid #ddd;
   border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding-left: 0;
   min-width: 200px;
-}
-
-/* Show dropdown when parent has class 'show' */
-.nav-item.dropdown.show > .dropdown-menu {
-  display: block;
-}
-
-/* Hover effect for desktop */
-@media (min-width: 992px) {
-  .nav-item.dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
-/* Submenus */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-}
-
-/* Show/hide dropdowns */
-.navbar-nav .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 999;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-nav .dropdown:hover > .dropdown-menu,
-.navbar-nav .dropdown.show > .dropdown-menu {
-  display: block;
-}
-
-/* Submenu styles */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-}
-
-/* Icons spacing */
-.dropdown-item svg {
-  margin-left: 6px;
-}
-
-/* Apply line-height and spacing to dropdown items */
-.dropdown-menu .dropdown-item {
-  line-height: 2.2; /* Adjust for spacing (1.5–2.5 is ideal) */
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-size: 18px;
-}
-
-/* Apply line-height to nested submenus too */
-.dropdown-submenu .dropdown-menu .dropdown-item {
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .dropdown-item {
   padding: 10px 16px;
-  line-height: 2;
-}
-.rotate-icon {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
-
-.nav-link .fa-angle-down {
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.rotate-icon {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
-
-.dropdown-menu {
-  line-height: 2;
-  padding-left: 10px;
-}
-
-.dropdown-submenu .dropdown-item {
+  line-height: 1.4;
+  background-color: white;
+  white-space: nowrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.dropdown-item svg {
+  margin-left: 6px;
+}
+
+/* === Submenu === */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  position: absolute;
+  display: none;
+}
+
+/* === Desktop Hover Support === */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover > .dropdown-menu,
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0;
+    border-left: 2px solid #e0e0e0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  /* Force show menu if JS adds .show */
+  .dropdown-menu.show,
+  .dropdown-submenu .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .dropdown-submenu > .dropdown-item {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .dropdown-item {
+    line-height: 1.8;
+    font-size: 16px;
+  }
+}
+
+/* === Active Links === */
 .nav-link.active {
   font-weight: bold;
-  color: #b21001 !important; /* or any highlight color */
+  color: #b21001 !important;
 }
 
 .custom-dropdown .dropdown-menu .dropdown-item.active {

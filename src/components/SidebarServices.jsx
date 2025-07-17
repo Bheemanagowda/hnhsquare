@@ -20,8 +20,6 @@ const categorizedServices = [
       { name: "wallpaper", path: "/wallpaper" },
       { name: "Wall Paint", path: "/wall-paint" },
       { name: "Bathroom", path: "/bathroom" },
-      { name: "Bathroom", path: "/bathroom" },
-      { name: "Utility Area", path: "/utility-area" },
       { name: "Pooja Unit", path: "/pooja-unit" },
       { name: "Foyer Designs", path: "/foyer-designs" },
       { name: "Utility Area", path: "/utility-area" },

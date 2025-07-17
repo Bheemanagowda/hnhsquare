@@ -13,3 +13,7 @@ body {
   --bs-text-opacity: 1;
   color: #b21001 !important;
 }
+html,
+body {
+  scroll-behavior: auto !important;
+}

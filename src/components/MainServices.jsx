@@ -31,7 +31,7 @@ const MainServices = () => {
   };
 
   return (
-    <section className="p-5" style={{ backgroundColor: "#f3d4d2" }}>
+    <section className="p-space" style={{ backgroundColor: "#f3d4d2" }}>
       <div className="container">
         <h2 className="title mb-4 text-center">
           {" "}

@@ -22,6 +22,8 @@ import ProductsDeatil from "./Pages/ProductsDeatil";
 
 // Component Imports
 import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop"; // use correct extension if needed
+
 import Footer from "./components/Footer";
 import TopHeader from "./components/TopHeader";
 import Loader from "./components/Loader";
@@ -33,6 +35,14 @@ function App() {
   useAOS();
   const [loading, setLoading] = useState(true);
 
+  // ✅ Move scroll restoration here
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
@@ -42,14 +52,13 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <TopHeader />
       <Header />
+
       <Routes>
-        {/* Home redirection */}
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-
-        {/* Static Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/clients" element={<OurClients />} />
@@ -57,23 +66,16 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/contactus" element={<Contactus />} />
-
-        {/* Product Routes */}
-
         <Route path="sliding-door" element={<SliderDoor />} />
-
-        {/* Services */}
         <Route path="/service/interior-design" element={<InteriorDesign />} />
         <Route path="/service/profile-section" element={<ProfileSection />} />
-
         <Route path=":slug" element={<ProductsDeatil />} />
-
-        {/* 404 Page */}
         <Route
           path="*"
           element={<h2 className="text-center my-5">404 - Page Not Found</h2>}
         />
       </Routes>
+
       <Footer />
       <ScrollButton />
       <WhatsAppWidget />
