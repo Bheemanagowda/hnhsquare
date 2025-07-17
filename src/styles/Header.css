@@ -121,12 +121,12 @@
   }
 
   .dropdown-submenu > .dropdown-item {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
   }
 
   .dropdown-item {
-    line-height: 1.8;
+    line-height: 1;
     font-size: 16px;
   }
 }
@@ -140,4 +140,10 @@
 .custom-dropdown .dropdown-menu .dropdown-item.active {
   background-color: #f0f0f0;
   font-weight: 600;
+}
+.nav-link.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
