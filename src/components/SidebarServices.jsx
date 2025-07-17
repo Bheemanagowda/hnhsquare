@@ -35,14 +35,13 @@ const categorizedServices = [
     items: [
       { name: "Sliding Door", path: "/sliding-door" },
       { name: "Bathroom Partitions", path: "/bathroom-partitions" },
-      { name: "Open Doors", path: "/open-door" },
+      { name: "Open Door", path: "/open-door" },
       { name: "LED Mirrors", path: "/led-mirrors" },
-      { name: "Office Partitions", path: "/office-partitions" },
-      { name: "Open Shutters", path: "/open-shutters" },
-      { name: "Profile Showcase ", path: "/profile-showcase" },
+      { name: "Profile Showcase", path: "/profile-showcase" }, // Keep only one
       { name: "Pooja Doors", path: "/pooja-doors" },
       { name: "Profile Doors", path: "/profile-doors" },
-      { name: "Profile Showcases", path: "/profile-showcase" },
+      { name: "Office Partitions", path: "/office-partitions" },
+      { name: "Open Shutters", path: "/open-shutters" },
       { name: "Walk-in Closet", path: "/walkin-closet" },
     ],
   },
@@ -53,7 +52,16 @@ const SidebarServices = ({
   services = [],
   type = "product",
 }) => {
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(() => {
+    const category = categorizedServices.find((cat) =>
+      cat.items.some(
+        (item) =>
+          item.name.trim().toLowerCase() ===
+          (activeService || "").trim().toLowerCase()
+      )
+    );
+    return category?.title || null;
+  });
 
   if (type === "blog") {
     return (

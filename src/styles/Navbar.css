@@ -112,8 +112,6 @@
     border-left: 2px solid #e0e0e0;
     box-shadow: none;
     background-color: transparent;
-
-    z-index: 1000 !important;
   }
 
   /* Force show menu if JS adds .show */
@@ -123,12 +121,12 @@
   }
 
   .dropdown-submenu > .dropdown-item {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 
   .dropdown-item {
-    line-height: 1.1;
+    line-height: 1.8;
     font-size: 16px;
   }
 }
@@ -142,31 +140,4 @@
 .custom-dropdown .dropdown-menu .dropdown-item.active {
   background-color: #f0f0f0;
   font-weight: 600;
-}
-.nav-link .fa-angle-down {
-  margin-right: 6px !important; /* Adjust as needed */
-}
-.dropdown-toggle-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 150px; /* or your preferred size */
-}
-.nav-link.dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-/* Make nested dropdowns scrollable */
-
-/* Optional: rotate arrow icon on open */
-
-@media (max-width: 768px) {
-  .dropdown-submenu .dropdown-menu {
-    position: relative;
-    left: 0;
-    top: 0;
-  }
 }

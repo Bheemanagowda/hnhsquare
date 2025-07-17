@@ -63,3 +63,8 @@
 .hover-bg:hover .recent-post-titel {
   color: white;
 }
+.btn-outline-danger {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: #000 1px solid !important;
+}

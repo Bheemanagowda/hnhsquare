@@ -19,9 +19,10 @@ import BlogDetails from "./Pages/BlogDetails";
 import InteriorDesign from "./Pages/InteriorDesign";
 import ProfileSection from "./Pages/ProfileSection";
 import ProductsDeatil from "./Pages/ProductsDeatil";
+import Header from "./components/Header";
 
 // Component Imports
-import Header from "./components/Header";
+
 import ScrollToTop from "./components/ScrollToTop"; // use correct extension if needed
 
 import Footer from "./components/Footer";
