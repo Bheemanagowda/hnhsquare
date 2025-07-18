@@ -119,15 +119,13 @@ const Footer = () => {
             </div>
             <div className="d-flex align-items-center contact-text">
               <FaPhoneAlt className="me-2 icon" />
-              <p>
-                <Telephone showSemicolon={true} />
-              </p>
+
+              <Telephone showSemicolon={true} />
             </div>
             <div className="d-flex align-items-center contact-text">
               <FaEnvelope className="me-2 icon" />
-              <p>
-                <Email showSemicolon={true} />
-              </p>
+
+              <Email showSemicolon={true} />
             </div>
           </div>
         </div>

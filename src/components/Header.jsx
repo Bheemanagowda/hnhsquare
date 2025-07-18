@@ -60,7 +60,10 @@ const Header = () => {
               onMouseEnter={() => toggleMenu("products", true)}
               onMouseLeave={() => toggleMenu("products", false)}
             >
-              <span className="nav-link dropdown-toggle">
+              <span
+                className="nav-link dropdown-toggle"
+                onClick={() => toggleMenu("products", !openMenus.products)}
+              >
                 Products{" "}
                 <FaAngleDown
                   className={openMenus.products ? "rotate-icon" : ""}
@@ -75,7 +78,10 @@ const Header = () => {
                   onMouseEnter={() => toggleMenu("interior", true)}
                   onMouseLeave={() => toggleMenu("interior", false)}
                 >
-                  <span className="dropdown-item">
+                  <span
+                    className="dropdown-item"
+                    onClick={() => toggleMenu("interior", !openMenus.interior)}
+                  >
                     Interior Design{" "}
                     <FaAngleDown
                       className={openMenus.interior ? "rotate-icon" : ""}
@@ -92,8 +98,13 @@ const Header = () => {
                       onMouseEnter={() => toggleMenu("residential", true)}
                       onMouseLeave={() => toggleMenu("residential", false)}
                     >
-                      <span className="dropdown-item">
-                        Residential Interior Design
+                      <span
+                        className="dropdown-item"
+                        onClick={() =>
+                          toggleMenu("residential", !openMenus.residential)
+                        }
+                      >
+                        Residential Interior Design{" "}
                         <FaAngleDown
                           className={openMenus.residential ? "rotate-icon" : ""}
                         />
@@ -111,7 +122,6 @@ const Header = () => {
                             Modular Kitchen
                           </span>
                         </li>
-
                         <li>
                           <span
                             className="dropdown-item"
@@ -130,7 +140,6 @@ const Header = () => {
                             Crockery Units
                           </span>
                         </li>
-
                         <li>
                           <span
                             className="dropdown-item"
@@ -270,8 +279,13 @@ const Header = () => {
                       onMouseEnter={() => toggleMenu("commercial", true)}
                       onMouseLeave={() => toggleMenu("commercial", false)}
                     >
-                      <span className="dropdown-item">
-                        Commercial Interior Design
+                      <span
+                        className="dropdown-item"
+                        onClick={() =>
+                          toggleMenu("commercial", !openMenus.commercial)
+                        }
+                      >
+                        Commercial Interior Design{" "}
                         <FaAngleDown
                           className={openMenus.commercial ? "rotate-icon" : ""}
                         />
@@ -300,7 +314,10 @@ const Header = () => {
                   onMouseEnter={() => toggleMenu("shutters", true)}
                   onMouseLeave={() => toggleMenu("shutters", false)}
                 >
-                  <span className="dropdown-item">
+                  <span
+                    className="dropdown-item"
+                    onClick={() => toggleMenu("shutters", !openMenus.shutters)}
+                  >
                     Profile Sections{" "}
                     <FaAngleDown
                       className={openMenus.shutters ? "rotate-icon" : ""}
@@ -359,7 +376,6 @@ const Header = () => {
                         Open Shutters
                       </span>
                     </li>
-
                     <li>
                       <span
                         className="dropdown-item"
@@ -378,7 +394,6 @@ const Header = () => {
                         Sliding Door For Room Entrance
                       </span>
                     </li>
-
                     <li>
                       <span
                         className="dropdown-item"

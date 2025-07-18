@@ -15,9 +15,9 @@ const Career = () => {
         <h2 className="text-start title mb-4">
           Careers At <span className="color-text"> HNH SQUARE PROFILE</span>
         </h2>
-        <div class="underline-wrapper-left">
-          <div class="underline-only who-we-are mb-4 border-color">
-            <UnderlineOnly />
+        <div className="underline-wrapper-left">
+          <div className="underline-only who-we-are mb-4 border-color">
+            <UnderlineOnly className="mb-4" />
           </div>
         </div>
         <p className="career-description">
