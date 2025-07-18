@@ -2,20 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-:root {
-  --primary-color: #262626; /* You can use any color you like */
-  --bs-primary-rgb: 255, 0, 0 !important; /* Red in RGB */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: #000; /* optional */
-  font-family: "Montserrat", sans-serif !important;
-  overflow-x: hidden !important;
-}
-
 /* Apply to header or any main container */
 .custom-header {
   width: 100%;

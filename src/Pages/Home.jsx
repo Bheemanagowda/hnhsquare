@@ -38,35 +38,75 @@ function Home() {
 
   return (
     <div>
+      {/* banner section start */}
       <div className="desktop-banner">
         <BannerSlider />
       </div>
-
+      {/* banner section end */}
+      {/* Mobile banner section start */}
       <div className="mobile-banner">
         <MobileBanner />
       </div>
+      {/* Mobile banner section end */}
+      {/* About Us section start */}
       <AboutUs />
+      {/* About Us section end */}
+      {/* Main Services section start */}
       <MainServices />
+      {/* Main Services section end */}
 
+      {/* Why Choose Us section start */}
       <WhychooseUs />
+      {/* Why Choose Us section end */}
+
+      {/* Product Slider section start */}
       <ProductSlider />
+      {/* Product Slider section end */}
+
+      {/* Why HNH Profile section start */}
       <WhyhnhProfile />
+      {/* Why HNH Profile section end */}
+
+      {/* Working Process section start */}
       <WorkingProcess />
+      {/* Working Process section end */}
+
+      {/* Video section start */}
       <Video />
+      {/* Video section end */}
+
+      {/* Collections section start */}
       <Collections
         images={galleryImages}
         layoutType="home"
         title="Our"
         className="p-space"
       />
+      {/* Collections section end */}
 
+      {/* Company Stats section start */}
       <CompanyStats />
+      {/* Company Stats section end */}
 
+      {/* Testimonial Slider section start */}
       <TestimonialSlider />
+      {/* Testimonial Slider section end */}
+
+      {/* Contact Us section start */}
       <ContactUs />
+      {/* Contact Us section end */}
+
+      {/* FAQ section start */}
       <FAQSection />
+      {/* FAQ section end */}
+
+      {/* Blog Slider section start */}
       <BlogSlider />
+      {/* Blog Slider section end */}
+
+      {/* Clients section start */}
       <Clients />
+      {/* Clients section end */}
     </div>
   );
 }

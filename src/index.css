@@ -17,3 +17,9 @@ html,
 body {
   scroll-behavior: auto !important;
 }
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+}
