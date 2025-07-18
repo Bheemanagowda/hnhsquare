@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/FAQSection.css";
-import doctorImage from "../assets/images/faq/faq.png";
-import bgImage from "../assets/images/faq/bg.jpg";
+import doctorImage from "../assets/images/faq/faq.webp";
+import bgImage from "../assets/images/faq/bg.webp";
 import UnderlineOnly from "./UnderlineOnly";
 import { motion } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";

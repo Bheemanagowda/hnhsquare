@@ -1,7 +1,7 @@
 import React from "react";
 import Collections from "../components/Collections";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 
 import BathroomPartition1 from "../assets/images/gallery/bathroom-partition/1.jpg";
 import BathroomPartition2 from "../assets/images/gallery/bathroom-partition/2.jpg";

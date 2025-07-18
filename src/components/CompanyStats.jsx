@@ -8,7 +8,7 @@ import members from "../assets/images/icons/our-achievements/2.png";
 import completed from "../assets/images/icons/our-achievements/3.png";
 import customers from "../assets/images/icons/our-achievements/4.png";
 
-import bg from "../assets/images/bg/1.jpg";
+import bg from "../assets/images/bg/bg-2.webp";
 import UnderlineOnly from "./UnderlineOnly";
 
 const statsData = [

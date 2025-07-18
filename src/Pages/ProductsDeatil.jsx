@@ -6,7 +6,7 @@ import Modal from "../components/Modal";
 import { productData } from "../Data/products";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg4.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg4.webp";
 import Button from "../components/Button"; // ✅ Make sure this exists
 
 const ProductsDeatil = () => {

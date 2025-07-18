@@ -2,7 +2,7 @@ import React from "react";
 import { FaEye, FaBullseye, FaHeart } from "react-icons/fa";
 
 import "../styles/VisionMission.css";
-import bg from "../assets/images/bg/innerbg2.jpg";
+import bg from "../assets/images/bg/innerbg2.webp";
 import UnderlineOnly from "../components/UnderlineOnly";
 import vision from "../assets/images/icons/abt-us/vision.png";
 import values from "../assets/images/icons/abt-us/valuse.png";

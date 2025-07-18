@@ -6,12 +6,12 @@ import "../styles/space.css";
 import UnderlineOnly from "./UnderlineOnly";
 
 // Import your single client logo image (footer.jpg in this case)
-import clientLogo1 from "../assets/images/vendors/1.jpg";
-import clientLogo2 from "../assets/images/vendors/2.jpg";
-import clientLogo3 from "../assets/images/vendors/3.jpg";
-import clientLogo4 from "../assets/images/vendors/4.jpg";
-import clientLogo5 from "../assets/images/vendors/5.jpg";
-import clientLogo6 from "../assets/images/vendors/6.jpg";
+import clientLogo1 from "../assets/images/vendors/1.webp";
+import clientLogo2 from "../assets/images/vendors/2.webp";
+import clientLogo3 from "../assets/images/vendors/3.webp";
+import clientLogo4 from "../assets/images/vendors/4.webp";
+import clientLogo5 from "../assets/images/vendors/5.webp";
+import clientLogo6 from "../assets/images/vendors/6.webp";
 
 const Clients = () => {
   // Array of logo image paths

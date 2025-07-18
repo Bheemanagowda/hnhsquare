@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Career.css"; // Optional: Add styling here
 import UnderlineOnly from "../components/UnderlineOnly";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 const Career = () => {
   return (
     <div>

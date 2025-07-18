@@ -7,7 +7,7 @@ import concept from "../assets/images/icons/our-working-process/1.png";
 import Planning from "../assets/images/icons/our-working-process/2.png";
 import Implementation from "../assets/images/icons/our-working-process/3.png";
 import Quality from "../assets/images/icons/our-working-process/4.png";
-import bg from "../assets/images/bg/bg3.jpg";
+import bg from "../assets/images/bg/bg-3.webp";
 import UnderlineOnly from "./UnderlineOnly";
 
 const WorkingProcess = () => {

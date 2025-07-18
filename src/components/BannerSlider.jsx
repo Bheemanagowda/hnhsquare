@@ -3,9 +3,9 @@ import React from "react";
 import Slider from "./Slider";
 
 // Banner images
-import banner1 from "../assets/images/banners/1.jpg";
-import banner2 from "../assets/images/banners/2.jpg";
-import banner3 from "../assets/images/banners/3.jpg";
+import banner1 from "../assets/images/banners/1.webp";
+import banner2 from "../assets/images/banners/2.webp";
+import banner3 from "../assets/images/banners/3.webp";
 
 const bannerImages = [banner1, banner2, banner3];
 

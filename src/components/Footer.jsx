@@ -1,7 +1,7 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "../styles/Footer.css";
 import footerlogo from "../assets/images/logo/footer.jpg";
-import footerBg from "../assets/images/bg/footer-bg.jpg";
+import footerBg from "../assets/images/bg/footer-bg.webp";
 import qrcode from "../assets/images/qrcode/qrcode.png";
 
 import "../styles/space.css";

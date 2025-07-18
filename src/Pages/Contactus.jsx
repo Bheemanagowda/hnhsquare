@@ -10,7 +10,7 @@ import "./ContactUs.css";
 import MapEmbed from "../components/MapEmbed";
 import Breadcrumb from "../components/Breadcrumb";
 import Underline from "../components/UnderlineOnly";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 
 const ContactUs = () => {
   return (

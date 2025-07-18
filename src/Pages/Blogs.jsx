@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaRegClock } from "react-icons/fa";
-import breadcrumbBg from "../assets/images/bg/innerbg4.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg4.webp";
 import Breadcrumb from "../components/Breadcrumb";
 import "../styles/InnerBlog.css";
 import UnderlineOnly from "../components/UnderlineOnly";

@@ -16,12 +16,12 @@ import BlogSlider from "../components/BlogSlider";
 import FAQSection from "../components/FAQSection";
 import WorkingProcess from "../components/WorkingProcess";
 import "../styles/style.css";
-import img1 from "../assets/images/gallery/led-mirror.jpg";
-import img2 from "../assets/images/gallery/walkin-closet.jpg";
-import img3 from "../assets/images/gallery/profil-door.jpg";
-import img4 from "../assets/images/gallery/pooja-doors.jpg";
-import img5 from "../assets/images/gallery/bathroom-partition.jpg";
-import img6 from "../assets/images/gallery/wardrobe-sliding.jpg";
+import img1 from "../assets/images/gallery/led-mirror.webp";
+import img2 from "../assets/images/gallery/walkin-closet.webp";
+import img3 from "../assets/images/gallery/profil-door.webp";
+import img4 from "../assets/images/gallery/pooja-doors.webp";
+import img5 from "../assets/images/gallery/bathroom-partition.webp";
+import img6 from "../assets/images/gallery/wardrobe-sliding.webp";
 import MobileBanner from "../components/MobileBanner";
 
 import MainServices from "../components/MainServices";

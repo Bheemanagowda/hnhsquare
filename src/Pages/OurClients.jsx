@@ -4,14 +4,14 @@ import "../styles/space.css";
 import UnderlineOnly from "../components/UnderlineOnly";
 
 // Import client logos
-import clientLogo1 from "../assets/images/vendors/1.jpg";
-import clientLogo2 from "../assets/images/vendors/2.jpg";
-import clientLogo3 from "../assets/images/vendors/3.jpg";
-import clientLogo4 from "../assets/images/vendors/4.jpg";
-import clientLogo5 from "../assets/images/vendors/5.jpg";
-import clientLogo6 from "../assets/images/vendors/6.jpg";
+import clientLogo1 from "../assets/images/vendors/1.webp";
+import clientLogo2 from "../assets/images/vendors/2.webp";
+import clientLogo3 from "../assets/images/vendors/3.webp";
+import clientLogo4 from "../assets/images/vendors/4.webp";
+import clientLogo5 from "../assets/images/vendors/5.webp";
+import clientLogo6 from "../assets/images/vendors/6.webp";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 
 const clientLogos = [
   clientLogo1,

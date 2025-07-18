@@ -1,7 +1,7 @@
 import React from "react";
 import MainServicePage from "../components/MainServicePage";
 import interiorImg from "../assets/images/interior-design/abt.jpg";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 
 // Images
 import i1 from "../assets/images/our-main-service/interior-design/1.png";

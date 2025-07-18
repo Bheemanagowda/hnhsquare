@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
-import InteriorDesign from "../assets/images/our-main-service/interior.jpg";
-import ProfileSections from "../assets/images/our-main-service/profile.jpg";
+import InteriorDesign from "../assets/images/our-main-service/interior.webp";
+import ProfileSections from "../assets/images/our-main-service/profile.webp";
 import UnderlineOnly from "./UnderlineOnly";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 

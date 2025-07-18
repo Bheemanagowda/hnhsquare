@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import blogData from "../Data/blogData";
 import SidebarServices from "../components/SidebarServices";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg4.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg4.webp";
 
 function BlogDetails() {
   const { slug } = useParams();

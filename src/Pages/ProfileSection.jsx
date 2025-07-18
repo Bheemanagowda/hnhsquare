@@ -1,7 +1,7 @@
 import React from "react";
 import MainServicePage from "../components/MainServicePage";
 import ProfileSectionImg from "../assets/images/profile-section/profile-section.jpg";
-import breadcrumbBg from "../assets/images/bg/innerbg1.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg1.webp";
 
 // Images
 import p1 from "../assets/images/our-main-service/profile-section/1.png";

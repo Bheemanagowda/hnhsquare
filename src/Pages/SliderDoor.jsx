@@ -6,7 +6,7 @@ import Slider1 from "../assets/images/inner-products/slider-door/1.jpg";
 import Slider2 from "../assets/images/inner-products/slider-door/2.jpg";
 import Slider3 from "../assets/images/inner-products/slider-door/3.jpg";
 import Breadcrumb from "../components/Breadcrumb";
-import breadcrumbBg from "../assets/images/bg/innerbg3.jpg";
+import breadcrumbBg from "../assets/images/bg/innerbg3.webp";
 import Button from "../components/Button";
 
 // Bootstrap Modal imports
