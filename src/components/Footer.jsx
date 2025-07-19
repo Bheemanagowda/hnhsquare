@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <KeyboardDoubleArrowRightIcon />
-                <a href="">Products</a>
+                <a href="/modular-kitchen">Products</a>
               </li>
               <li>
                 <KeyboardDoubleArrowRightIcon />
