@@ -9,7 +9,6 @@ const Loader = () => {
         <strong>
           {" "}
           HNH <span style={{ color: "#b21001" }}>SQUARE </span>
-          PROFILE
         </strong>
       </h4>
     </div>
