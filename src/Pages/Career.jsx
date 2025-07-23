@@ -13,7 +13,7 @@ const Career = () => {
       />
       <div className="container py-5 px-3">
         <h2 className="text-start title mb-4">
-          Careers At <span className="color-text"> HNH SQUARE PROFILE</span>
+          Careers At <span className="color-text"> HNH SQUARE</span>
         </h2>
         <div className="underline-wrapper-left">
           <div className="underline-only who-we-are mb-4 border-color">
@@ -21,12 +21,11 @@ const Career = () => {
           </div>
         </div>
         <p className="career-description">
-          <strong>HNH SQUARE PROFILE </strong>believes that the right
-          environment and the right opportunities allow deserving people to
-          deliver outstanding results. Our employees have the opportunity to
-          learn and develop, to grow and perform to their fullest potential.
-          They work in an environment that values their ideas, teamwork, and
-          personal safety.
+          <strong>HNH SQUARE</strong>believes that the right environment and the
+          right opportunities allow deserving people to deliver outstanding
+          results. Our employees have the opportunity to learn and develop, to
+          grow and perform to their fullest potential. They work in an
+          environment that values their ideas, teamwork, and personal safety.
         </p>
         <p className="career-description">
           Our culture expects results, and for those results to be achieved in a
@@ -38,8 +37,8 @@ const Career = () => {
           hear from you.
         </p>
         <p className="career-contact mt-4">
-          <strong>If you're ready to be a part of HNH SQUARE PROFILE</strong>,
-          you can send mail through the following E-Mail Id :{" "}
+          <strong>If you're ready to be a part of HNH SQUARE</strong>, you can
+          send mail through the following E-Mail Id :{" "}
           <a href="mailto:hnhsquare@gmail.com" className="career-email">
             hnhsquare@gmail.com
           </a>
