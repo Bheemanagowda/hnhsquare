@@ -14,22 +14,22 @@ const WorkingProcess = () => {
   const cards = [
     {
       title: "Concept & Creativity",
-      desc: "At HNH Profile Square, our creative journey begins with understanding your lifestyle and vision. We conceptualize sleek and modern sliding shutters and profiles that combine elegance with everyday functionality. From textures to colors, every design is tailored to elevate your space with a touch of innovative craftsmanship.",
+      desc: "At HNH Square, our creative journey begins with understanding your lifestyle and vision. We conceptualize sleek and modern sliding shutters and profiles that combine elegance with everyday functionality. From textures to colors, every design is tailored to elevate your space with a touch of innovative craftsmanship.",
       image: concept,
     },
     {
       title: "Planning & Detailing",
-      desc: "Every project at HNH Profile Square is backed by meticulous planning and precise detailing. We assess space, materials, and user preferences to create customized sliding shutter solutions. Our process includes cost estimation, timeline planning, and technical drawings to ensure a flawless installation from start to finish.",
+      desc: "Every project at HNH Square is backed by meticulous planning and precise detailing. We assess space, materials, and user preferences to create customized sliding shutter solutions. Our process includes cost estimation, timeline planning, and technical drawings to ensure a flawless installation from start to finish.",
       image: Planning,
     },
     {
       title: "Implementation",
-      desc: "Once the design and planning are finalized, our skilled team brings your vision to life with precision. At HNH Profile Square, we implement high-quality slider and shutter systems using advanced tools, ensuring smooth operation, durability, and a seamless finish tailored to your space.",
+      desc: "Once the design and planning are finalized, our skilled team brings your vision to life with precision. At HNH Square, we implement high-quality slider and shutter systems using advanced tools, ensuring smooth operation, durability, and a seamless finish tailored to your space.",
       image: Implementation,
     },
     {
       title: "Quality Delivery",
-      desc: "At HNH Profile Square, we ensure every sliding shutter and profile is delivered with unmatched quality. Our commitment to excellence means precise fittings, premium materials, and thorough quality checks—giving you a flawless finish that’s both stylish and long-lasting.",
+      desc: "At HNH Square, we ensure every sliding shutter and profile is delivered with unmatched quality. Our commitment to excellence means precise fittings, premium materials, and thorough quality checks—giving you a flawless finish that’s both stylish and long-lasting.",
       image: Quality,
     },
   ];
@@ -52,8 +52,8 @@ const WorkingProcess = () => {
           </h2>
           <UnderlineOnly className="mb-4" />
           <h4 className="text-dark">
-            At HNH Profile Square, we believe in delivering precision, elegance,
-            and functionality through a seamless process.
+            At HNH Square, we believe in delivering precision, elegance, and
+            functionality through a seamless process.
           </h4>
         </div>
 

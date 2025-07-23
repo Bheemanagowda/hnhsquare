@@ -134,7 +134,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="text-center py-3 copyright-bg">
         <p>
-          © 2025 <strong>HNH SQUARE PROFILE</strong>, All Rights Reserved.
+          © 2025 <strong>HNH SQUARE </strong>, All Rights Reserved.
         </p>
       </div>
     </footer>

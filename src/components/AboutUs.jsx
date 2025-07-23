@@ -27,14 +27,13 @@ const AboutUs = ({ showButton = true }) => {
             <div className="abt-info">
               <h2 className="mb-3 mb-2 title">
                 Welcome to <span className="color-text">HNH SQUARE </span>
-                PROFILE
               </h2>
               <p className="mb-3">
-                At <strong>HNH SQUARE PROFILE</strong>, we blend refined
-                aesthetics with cutting-edge craftsmanship to redefine modern
-                interiors. Specializing in premium profile shutters and sliding
-                systems, our solutions are engineered for performance,
-                durability, and sleek contemporary living.
+                At <strong>HNH SQUARE </strong>, we blend refined aesthetics
+                with cutting-edge craftsmanship to redefine modern interiors.
+                Specializing in premium profile shutters and sliding systems,
+                our solutions are engineered for performance, durability, and
+                sleek contemporary living.
               </p>
               <p className="mb-3">
                 Our designs go beyond just functionality. With features like

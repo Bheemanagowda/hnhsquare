@@ -48,8 +48,8 @@ const WhyhnhProfile = () => {
                 </strong>
               </h3>
               <p className="section-description">
-                At HNH SQUARE PROFILE, we take pride in being one of Bangalore’s
-                leading manufacturers, offering a wide range of high-quality
+                At HNH SQUARE, we take pride in being one of Bangalore’s leading
+                manufacturers, offering a wide range of high-quality
                 architectural solutions for residential, commercial, and
                 industrial spaces.
               </p>

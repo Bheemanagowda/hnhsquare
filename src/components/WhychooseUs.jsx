@@ -13,7 +13,7 @@ const features = [
   {
     title: "Quality Materials",
     image: quality,
-    desc: "At HNH Profile Square, we believe great design starts with great materials. We use only high-quality, durable materials to ensure lasting performance and exceptional results.",
+    desc: "At HNH  Square, we believe great design starts with great materials. We use only high-quality, durable materials to ensure lasting performance and exceptional results.",
   },
   {
     title: "200+ Expert Designers",
@@ -23,12 +23,12 @@ const features = [
   {
     title: "10 Years of Warranty",
     image: warranty,
-    desc: "At HNH Profile Square, we proudly offer 10 Years Warranty on all sliding shutters and profiles—reflecting our commitment to quality, durability, and lasting satisfaction.",
+    desc: "At HNH  Square, we proudly offer 10 Years Warranty on all sliding shutters and profiles—reflecting our commitment to quality, durability, and lasting satisfaction.",
   },
   {
     title: "Timely Delivery",
     image: timely,
-    desc: "At HNH Square Profile, we ensure on-time delivery through a well-planned schedule and efficient coordination—without compromising on quality or precision.",
+    desc: "At HNH Square, we ensure on-time delivery through a well-planned schedule and efficient coordination—without compromising on quality or precision.",
   },
   {
     title: "Price Transparency",

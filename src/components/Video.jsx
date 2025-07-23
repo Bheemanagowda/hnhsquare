@@ -14,8 +14,8 @@ const Video = () => {
         <UnderlineOnly className="mb-30 .who-we-are border-color" />
         <div className="video-content">
           <h4 className="design-para text-white text-center mb-5">
-            HNH Square Profile introduces a bold evolution in modern interiors –
-            setting new standards in style, strength, and seamless elegance.
+            HNH Square introduces a bold evolution in modern interiors – setting
+            new standards in style, strength, and seamless elegance.
           </h4>
         </div>
         <div className="video-wrapper " width="100%" title="HNH SQAURE PROFILE">

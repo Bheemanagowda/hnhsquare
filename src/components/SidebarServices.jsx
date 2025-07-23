@@ -17,7 +17,7 @@ const categorizedServices = [
       { name: "False Ceiling", path: "/false-ceiling" },
       { name: "Crockery Units", path: "/crockery-units" },
       { name: "Lights", path: "/lights" },
-      { name: "wallpaper", path: "/wallpaper" },
+      { name: "Wallpaper", path: "/wallpaper" },
       { name: "Wall Paint", path: "/wall-paint" },
       { name: "Bathroom", path: "/bathroom" },
       { name: "Pooja Unit", path: "/pooja-unit" },
@@ -27,7 +27,7 @@ const categorizedServices = [
       { name: "Kids Bedroom", path: "/kids-bedroom" },
       { name: "Guest Bedroom", path: "/guest-bedroom" },
       { name: "Master Bedroom", path: "/master-bedroom" },
-      { name: "Balcony Designs", path: "/balcony-design" },
+      { name: "Balcony Design", path: "/balcony-design" },
     ],
   },
   {
