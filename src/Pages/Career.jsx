@@ -21,8 +21,8 @@ const Career = () => {
           </div>
         </div>
         <p className="career-description">
-          <strong>HNH SQUARE</strong>believes that the right environment and the
-          right opportunities allow deserving people to deliver outstanding
+          <strong>HNH SQUARE</strong> believes that the right environment and
+          the right opportunities allow deserving people to deliver outstanding
           results. Our employees have the opportunity to learn and develop, to
           grow and perform to their fullest potential. They work in an
           environment that values their ideas, teamwork, and personal safety.
